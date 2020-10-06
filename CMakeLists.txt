@@ -3,6 +3,7 @@ project(ENGINE)
 
 include_directories(
 	src
+	contrib/glm-0.9.9.5
 )
 
 add_library(myengine
