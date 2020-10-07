@@ -1,13 +1,11 @@
 #include <Engine/Application.h>
 
-#include <iostream>
+using namespace myengine;
 
 int main()
 {
-	std::cout << "Hello World!" << std::endl;
-
-	Application app;
-	app.Dummy();
+	std::shared_ptr<Application> app = Application::Initialise();
+	app->Start();
 
 	return 0;
 }
