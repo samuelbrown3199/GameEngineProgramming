@@ -35,6 +35,11 @@ endif()
 add_library(myengine
 	src/Engine/Application.cpp
 	src/Engine/Application.h
+	src/Engine/Entity.h
+	src/Engine/Entity.cpp
+	src/Engine/Component.h
+	src/Engine/Component.cpp
+	src/Engine/MegaHeader.h
 )
 
 
