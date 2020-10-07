@@ -47,6 +47,8 @@ target_link_libraries(myengine rend)
 
 add_executable(demo
 	src/TechDemo/main.cpp
+	src/TechDemo/Player.h
+	src/TechDemo/Player.cpp
 )
 
 target_link_libraries(demo myengine)
