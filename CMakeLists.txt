@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
 project(ENGINE)
 
+#set(CMAKE_EXECUTABLE_SUFFIX ".html")
+#SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL=2")
+
 include_directories(
 	src
 )
@@ -35,15 +38,32 @@ endif()
 add_library(myengine
 	src/Engine/Application.cpp
 	src/Engine/Application.h
+	src/Engine/Screen.h
+	src/Engine/Screen.cpp
+	src/Engine/ResourceManager.h
+	src/Engine/ResourceManager.cpp
+	src/Engine/Resource.h
+	src/Engine/Texture.h
+	src/Engine/Texture.cpp
 	src/Engine/Entity.h
 	src/Engine/Entity.cpp
 	src/Engine/Component.h
 	src/Engine/Component.cpp
+	src/Engine/Shader.h
+	src/Engine/Shader.cpp
+	src/Engine/TriangleRenderer.h
+	src/Engine/TriangleRenderer.cpp
+	src/Engine/Renderer.h
+	src/Engine/Renderer.cpp
+	src/Engine/Transform.h
+	src/Engine/Transform.cpp
+	src/Engine/InputManager.h
+	src/Engine/InputManager.cpp
 	src/Engine/MegaHeader.h
 )
 
 
-target_link_libraries(myengine rend)
+target_link_libraries(myengine rend SDL2)
 
 add_executable(demo
 	src/TechDemo/main.cpp

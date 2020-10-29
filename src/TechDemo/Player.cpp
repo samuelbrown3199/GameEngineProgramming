@@ -1,11 +1,6 @@
 #include "Player.h"
 
-void Player::Tick()
-{
-
-}
-
 void Player::onTick()
 {
-
+	std::cout << "Player tick" << std::endl;
 }

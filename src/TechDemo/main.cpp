@@ -9,7 +9,9 @@ int main()
 	std::shared_ptr<Application> app = Application::Initialise();
 
 	std::shared_ptr<Entity> pe = app->AddEntity();
-	std::shared_ptr<Component> pc = pe->AddComponent<Player>();
+	pe->GetComponent<Transform>()->SetPosition(glm::vec3(0, 0, -10));
+
+	std::shared_ptr<TriangleRenderer> pc = pe->AddComponent<TriangleRenderer>();
 
 	app->Start();
 
