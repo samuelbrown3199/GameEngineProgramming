@@ -16,7 +16,7 @@ namespace myengine
 		std::shared_ptr<Application> rtn(new Application());
 		rtn->self = rtn;
 
-		rtn->resources = std::make_shared<ResourceManager>();
+		//rtn->resources = std::make_shared<ResourceManager>();
 		rtn->screen = std::make_shared<Screen>();
 
 		rtn->window = SDL_CreateWindow("Triangle", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, rtn->screen->GetScreenWidth(), rtn->screen->GetScreenHeight(), SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);

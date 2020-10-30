@@ -9,7 +9,7 @@ namespace myengine
 	class ResourceManager
 	{
 	private:
-		std::vector<std::shared_ptr<Resource>> resources;
+		//std::vector<std::shared_ptr<Resource>> resources;
 
 	public:
 
