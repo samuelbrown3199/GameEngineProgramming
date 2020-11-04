@@ -1,14 +1,15 @@
-#include "Texture.h"   
+#include "Texture.h"
+
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
 
 using namespace myengine;
 
-void Texture::LoadTexture(std::string path)
+void Texture::OnLoad()
 {
-    resourcePath = path;
-
     int w = 0;
     int h = 0;
-    unsigned char* data = stbi_load(path.c_str(), &w, &h, NULL, 4);
+    unsigned char* data = stbi_load(resourcePath.c_str(), &w, &h, NULL, 4);
     if (!data)
     {
         throw std::exception();

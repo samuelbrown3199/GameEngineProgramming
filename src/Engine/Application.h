@@ -18,7 +18,7 @@ namespace myengine
 
 		std::vector<std::shared_ptr<Entity>> entities;
 		std::weak_ptr<Application> self;
-		//std::shared_ptr<ResourceManager> resources;
+		std::shared_ptr<ResourceManager> resources;
 		std::shared_ptr<Screen> screen;
 
 		SDL_Window* window;
@@ -32,6 +32,7 @@ namespace myengine
 		void Start();
 
 		std::shared_ptr<Screen> GetScreen();
+		std::shared_ptr<ResourceManager> GetResources();
 		std::shared_ptr<Entity> AddEntity();
 	};
 }

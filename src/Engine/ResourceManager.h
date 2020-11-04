@@ -1,32 +1,38 @@
-#include <Vector>
-#include <Memory>
+#include <vector>
+#include <memory>
 #include <string>
-
-#include "Resource.h"
 
 namespace myengine
 {
+	class Resource;
+
 	class ResourceManager
 	{
 	private:
-		//std::vector<std::shared_ptr<Resource>> resources;
+		std::vector<std::shared_ptr<Resource>> resources;
 
 	public:
 
-		/*template<typename T>
+		template<typename T>
 		std::shared_ptr<T> LoadResource(std::string path)
 		{
-			for (size_t i = 0; i < resources.i++)
+			for (size_t ri = 0; ri < resources.size(); ri++)
 			{
-				if (resources.at(i)->resourcePath == path)
+				if (resources.at(ri)->resourcePath == path)
 				{
-					return resources.at(i);
+					std::shared_ptr<T> rtn = std::dynamic_pointer_cast<T>(resources.at(ri));
+					if (rtn)
+					{
+						return rtn;
+					}
 				}
 			}
 
-			std::shared_ptr<T> newResource = std::make_shared<T>(path);
+			std::shared_ptr<T> newResource = std::make_shared<T>();
+			newResource->resourcePath = path;
+			newResource->OnLoad();
 			resources.push_back(newResource);
 			return newResource;
-		}*/
+		}
 	};
 }

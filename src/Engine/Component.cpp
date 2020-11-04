@@ -1,5 +1,6 @@
 #include "Component.h"
 #include "Entity.h"
+#include "Application.h"
 
 namespace myengine
 {
@@ -11,12 +12,17 @@ namespace myengine
 	void Component::Tick() { onTick(); }
 	void Component::onTick() {}
 
-	std::shared_ptr<Entity> Component::getEntity()
+	std::shared_ptr<Entity> Component::GetEntity()
 	{
 		return entity.lock();
 	}
-	std::shared_ptr<Application> Component::getApplication()
+	std::shared_ptr<Application> Component::GetApplication()
 	{
-		return getEntity()->getApplication();
+		return GetEntity()->getApplication();
+	}
+
+	std::shared_ptr<ResourceManager> Component::GetResources()
+	{
+		return GetApplication()->GetResources();
 	}
 }

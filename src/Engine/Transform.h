@@ -11,10 +11,10 @@ namespace myengine
 		glm::vec3 rotation;
 		glm::vec3 scale;
 
-		void onInitialise();
-
 	public:
-		
+
+		void onInitialize();
+
 		void SetPosition(glm::vec3 pos);
 		void SetRotation(glm::vec3 rot);
 		glm::mat4 GetModelMatrix();

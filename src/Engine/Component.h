@@ -6,6 +6,7 @@ namespace myengine
 {
 	class Entity;
 	class Application;
+	class ResourceManager;
 
 	class Component
 	{
@@ -24,7 +25,8 @@ namespace myengine
 		void Tick();
 		virtual void onTick();
 
-		std::shared_ptr<Entity> getEntity();
-		std::shared_ptr<Application> getApplication();
+		std::shared_ptr<Entity> GetEntity();
+		std::shared_ptr<Application> GetApplication();
+		std::shared_ptr<ResourceManager> GetResources();
 	};
 }
