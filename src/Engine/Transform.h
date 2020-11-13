@@ -17,6 +17,8 @@ namespace myengine
 
 		void SetPosition(glm::vec3 pos);
 		void SetRotation(glm::vec3 rot);
+		glm::vec3 GetPosition();
+		glm::vec3 GetRotation();
 		glm::mat4 GetModelMatrix();
 	};
 }

@@ -1,18 +1,23 @@
 #pragma once
 #include <SDL.h>
 
-#include "Application.h"
+#include <vector>
 
-class InputManager
+namespace myengine
 {
-public:
+	class InputManager
+	{
+	public:
 
-	static int mouseX, mouseY;
+		static int mouseX, mouseY;
 
-	InputManager();
-	~InputManager();
+		InputManager();
+		~InputManager();
 
-	static bool IfKeyDown(SDL_Scancode key);
-	static bool IfMouseButtonDown(int button);
-	static void GetMousePosition();
-};
+		static bool IfKeyDown(SDL_Scancode key);
+		static bool IfMouseButtonDown(int button);
+		static void GetMousePosition();
+
+	private:
+	};
+}

@@ -2,10 +2,11 @@
 #define MYENGINE_MEGAHEADER_H
 
 #include "Application.h"
-#include "Entity.h"
+#include "Camera.h"
 #include "Component.h"
+#include "Entity.h"
 #include "Renderer.h"
-#include "TriangleRenderer.h"
 #include "Transform.h"
+#include "TriangleRenderer.h"
 
 #endif

@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "Camera.h"
 #include "ResourceManager.h"
 #include "Screen.h"
 #include "Entity.h"
@@ -91,5 +92,10 @@ namespace myengine
 
 		entities.push_back(rtn);
 		return rtn;
+	}
+
+	void Application::AddCamera(std::shared_ptr<Camera> cam)
+	{
+		camera = cam;
 	}
 }

@@ -60,6 +60,8 @@ add_library(myengine
 	src/Engine/Transform.cpp
 	src/Engine/InputManager.h
 	src/Engine/InputManager.cpp
+	src/Engine/Camera.h
+	src/Engine/Camera.cpp
 	src/Engine/MegaHeader.h
 )
 

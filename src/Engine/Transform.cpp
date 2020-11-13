@@ -16,6 +16,16 @@ void Transform::SetRotation(glm::vec3 rot)
 	rotation = rot;
 }
 
+glm::vec3 Transform::GetPosition()
+{
+	return position;
+}
+
+glm::vec3 Transform::GetRotation()
+{
+	return rotation;
+}
+
 glm::mat4 Transform::GetModelMatrix()
 {
 	glm::mat4 rtn(1.0f);
