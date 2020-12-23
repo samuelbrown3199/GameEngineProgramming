@@ -1,37 +1,44 @@
 #include "Player.h"
 
+#include <Engine/Camera.h>
+#include <Engine/InputManager.h>
+#include <glm/glm.hpp>
+
+using namespace myengine;
+
 void Player::onInitialize()
 {
 	cam = GetEntity()->GetComponent<Camera>();
+	transform = GetEntity()->GetComponent<Transform>();
 }
 
-/*void Player::CameraControls()
+void Player::CameraControls()
 {
 	if (InputManager::IfKeyDown(SDL_SCANCODE_W))
 	{
-		position += movementSpeed * forward;
+		transform->position += movementSpeed * cam->forward;
 	}
 	if (InputManager::IfKeyDown(SDL_SCANCODE_S))
 	{
-		position -= movementSpeed * forward;
+		transform->position -= movementSpeed * cam->forward;
 	}
 	if (InputManager::IfKeyDown(SDL_SCANCODE_A))
 	{
-		glm::vec3 direction = glm::cross(forward, up);
-		position -= movementSpeed * direction;
+		glm::vec3 direction = glm::cross(cam->forward, cam->up);
+		transform->position -= movementSpeed * direction;
 	}
 	if (InputManager::IfKeyDown(SDL_SCANCODE_D))
 	{
-		glm::vec3 direction = glm::cross(forward, up);
-		position += movementSpeed * direction;
+		glm::vec3 direction = glm::cross(cam->forward, cam->up);
+		transform->position += movementSpeed * direction;
 	}
 	if (InputManager::IfKeyDown(SDL_SCANCODE_SPACE))
 	{
-		position += movementSpeed * up;
+		transform->position += movementSpeed * cam->up;
 	}
 	if (InputManager::IfKeyDown(SDL_SCANCODE_X))
 	{
-		position -= movementSpeed * up;
+		transform->position -= movementSpeed * cam->up;
 	}
 
 	MouseMovement();
@@ -70,15 +77,16 @@ void Player::MouseMovement()
 		front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
 		front.y = sin(glm::radians(pitch));
 		front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-		forward = glm::normalize(front);
+		cam->forward = glm::normalize(front);
 	}
 	else
 	{
 		firstMouse = true;
 	}
-}*/
+}
 
 void Player::onTick()
 {
-	std::cout << "Player tick" << std::endl;
+	CameraControls();
+	MouseMovement();
 }

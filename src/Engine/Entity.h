@@ -6,6 +6,9 @@ namespace myengine
 	class Application;
 	class Component;
 
+	/**
+	*The entity class. Stores components for game data and functionality
+	*/
 	class Entity
 	{
 	friend class myengine::Application;
@@ -15,6 +18,9 @@ namespace myengine
 		std::weak_ptr<Application> application;
 		std::weak_ptr<Entity> self;
 	public:
+		/**
+		*Adds a component of the passed type to the entity.
+		*/
 		template<typename T>
 		std::shared_ptr<T> AddComponent()
 		{
@@ -26,7 +32,9 @@ namespace myengine
 
 			return rtn;
 		}
-
+		/**
+		*Returns the component of the passed type.
+		*/
 		template<typename T>
 		std::shared_ptr<T> GetComponent()
 		{
@@ -42,9 +50,18 @@ namespace myengine
 			throw std::exception();
 		}
 
+		/**
+		*The Render function for the entity. Loops over every component and calls their render function.
+		*/
 		void Render();
+		/**
+		*The Tick function for the entity. Loops over every component and calls their tick function.
+		*/
 		void Tick();
 
-		std::shared_ptr<Application> getApplication();
+		/**
+		*Returns the application class linked from the entity.
+		*/
+		std::shared_ptr<Application> GetApplication();
 	};
 }

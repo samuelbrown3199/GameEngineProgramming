@@ -19,7 +19,7 @@ namespace myengine
 		}
 	}
 
-	std::shared_ptr<Application> Entity::getApplication()
+	std::shared_ptr<Application> Entity::GetApplication()
 	{
 		return application.lock();
 	}

@@ -122,10 +122,10 @@ void Shader::UseShader()
     glUseProgram(programID);
 }
 
-void Shader::BindAttributeLocation(int index, const GLchar* name)
+/*void Shader::BindAttributeLocation(int index, const GLchar* name)
 {
     glBindAttribLocation(programID, index, name);
-}
+}*/
 
 void Shader::BindMatrix(std::string location, glm::mat4 matrix)
 {

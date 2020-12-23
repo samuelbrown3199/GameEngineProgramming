@@ -6,6 +6,7 @@
 #include "Transform.h"
 #include "Shader.h"
 #include "Texture.h"
+#include "Camera.h"
 
 using namespace myengine;
 
@@ -75,15 +76,16 @@ void TriangleRenderer::onInitialize()
 
 	shader = std::make_shared<Shader>("vertex.vs", "fragment.fs");
 	texture = GetResources()->LoadResource<Texture>("test.png");
-	shader->BindAttributeLocation(0, "in_Position");
-	shader->BindAttributeLocation(0, "in_TexCoords");
+	/*shader->BindAttributeLocation(0, "in_Position");
+	shader->BindAttributeLocation(0, "in_TexCoords");*/
 }
 
 void TriangleRenderer::onRender()
 {
 	shader->UseShader();
-	shader->BindMatrix("u_Projection", GetEntity()->getApplication()->GetScreen()->GetPerspective());
+	shader->BindMatrix("u_Projection", GetEntity()->GetApplication()->GetScreen()->GetPerspective());
 	shader->BindMatrix("u_Model", GetEntity()->GetComponent<Transform>()->GetModelMatrix());
+	shader->BindMatrix("u_View", GetApplication()->camera->view);
 
 	glBindTexture(GL_TEXTURE_2D, texture->textureID);
 	glBindVertexArray(vaoId);

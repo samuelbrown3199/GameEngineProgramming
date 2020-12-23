@@ -1,7 +1,8 @@
 #pragma once
-#include <SDL.h>
+#ifndef INPUTMANAGER_H_
+#define INPUTMANAGER_H_
 
-#include <vector>
+#include <SDL.h>
 
 namespace myengine
 {
@@ -17,7 +18,7 @@ namespace myengine
 		static bool IfKeyDown(SDL_Scancode key);
 		static bool IfMouseButtonDown(int button);
 		static void GetMousePosition();
-
-	private:
 	};
 }
+#endif
+

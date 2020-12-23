@@ -18,7 +18,7 @@ namespace myengine
 	}
 	std::shared_ptr<Application> Component::GetApplication()
 	{
-		return GetEntity()->getApplication();
+		return GetEntity()->GetApplication();
 	}
 
 	std::shared_ptr<ResourceManager> Component::GetResources()

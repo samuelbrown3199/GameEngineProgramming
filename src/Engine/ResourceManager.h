@@ -6,6 +6,9 @@ namespace myengine
 {
 	class Resource;
 
+	/**
+	*Handles resources for use in the engine. Handles loading and unloading of data.
+	*/
 	class ResourceManager
 	{
 	private:
@@ -13,6 +16,9 @@ namespace myengine
 
 	public:
 
+		/**
+		*Loads a resource of the passed resource type. Adds it the loaded resource list.
+		*/
 		template<typename T>
 		std::shared_ptr<T> LoadResource(std::string path)
 		{

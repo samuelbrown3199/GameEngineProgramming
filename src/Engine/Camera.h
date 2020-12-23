@@ -12,19 +12,17 @@
 
 namespace myengine
 {
+	/**
+	*Camera component. Used in rendering.
+	*/
 	class Camera : public Component
 	{
 	private:
 
-		bool firstMouse = true;
-		float pitch = 0.0f, yaw = -90.0f;
-
-		const float movementSpeed = 0.1f;
-		glm::vec2 oldMousePos, newMousePos;
+	public:
 
 		glm::vec3 up;
-
-	public:
+		glm::vec3 forward = glm::vec3(0.0f, 0.0f, -1.0f);
 
 		int time = 0;
 

@@ -44,6 +44,8 @@ add_library(myengine
 	src/Engine/ResourceManager.cpp
 	src/Engine/Resource.h
 	src/Engine/Resource.cpp
+	src/Engine/Model.h
+	src/Engine/Model.cpp
 	src/Engine/Texture.h
 	src/Engine/Texture.cpp
 	src/Engine/Entity.h

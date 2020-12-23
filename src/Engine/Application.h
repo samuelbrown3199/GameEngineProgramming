@@ -22,8 +22,6 @@ namespace myengine
 		std::shared_ptr<ResourceManager> resources;
 		std::shared_ptr<Screen> screen;
 
-		std::shared_ptr<Camera> camera;
-
 		SDL_Window* window;
 
 		bool loop = true;
@@ -37,6 +35,8 @@ namespace myengine
 		std::shared_ptr<Screen> GetScreen();
 		std::shared_ptr<ResourceManager> GetResources();
 		std::shared_ptr<Entity> AddEntity();
+
+		std::shared_ptr<Camera> camera;
 
 		void AddCamera(std::shared_ptr<Camera> cam);
 	};

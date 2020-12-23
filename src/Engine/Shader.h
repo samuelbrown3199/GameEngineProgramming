@@ -34,7 +34,7 @@ namespace myengine
 		void SetupShader(const GLchar* vertexSource, const GLchar* fragmentSource);
 		void UseShader();
 
-		void BindAttributeLocation(int index, const GLchar* name);
+		//void BindAttributeLocation(int index, const GLchar* name);
 		void BindMatrix(std::string location, glm::mat4 matrix);
 
 	protected:

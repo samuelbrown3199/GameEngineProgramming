@@ -14,6 +14,6 @@ namespace myengine
 	void Camera::onTick()
 	{
 		view = glm::lookAt(GetEntity()->GetComponent<Transform>()->GetPosition(),
-			GetEntity()->GetComponent<Transform>()->GetPosition() + GetEntity()->GetComponent<Transform>()->GetRotation(), up);
+			GetEntity()->GetComponent<Transform>()->GetPosition() + forward, up);
 	}
 }

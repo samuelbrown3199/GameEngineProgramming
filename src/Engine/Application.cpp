@@ -38,6 +38,10 @@ namespace myengine
 	{
 		SDL_Event e = { 0 };
 
+		glEnable(GL_CULL_FACE);
+		glEnable(GL_DEPTH_TEST);
+		glClearColor(0.0f, 0.45f, 0.45f, 1.0f);
+
 		while (loop)
 		{
 			while (SDL_PollEvent(&e) != 0)
@@ -54,13 +58,11 @@ namespace myengine
 				entities.at(ei)->Tick();
 			}
 
-			glClearColor(0.0f, 0.45f, 0.45f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			for (size_t ei = 0; ei < entities.size(); ei++)
 			{
 				entities.at(ei)->Render();
 			}
-
 			SDL_GL_SwapWindow(window);
 		}
 	}

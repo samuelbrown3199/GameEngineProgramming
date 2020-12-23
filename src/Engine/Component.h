@@ -8,25 +8,46 @@ namespace myengine
 	class Application;
 	class ResourceManager;
 
+	/**
+	*Component class for inheriting from.
+	*/
 	class Component
 	{
 	
-	friend class myengine::Entity;
-	private:
+		friend class myengine::Entity;
+		private:
 
-		std::weak_ptr<Entity> entity;
+			std::weak_ptr<Entity> entity;
 
-	public:
-		virtual void onInitialize();
+		public:
+			/**
+			*Initialize function for overriding in inheriting classes.
+			*/
+			virtual void onInitialize();
 
-		void Render();
-		virtual void onRender();
+			void Render();
+			/**
+			*Render function for overriding in inheriting classes.
+			*/
+			virtual void onRender();
 
-		void Tick();
-		virtual void onTick();
+			void Tick();
+			/**
+			*Tick function for overriding in inheriting classes.
+			*/
+			virtual void onTick();
 
-		std::shared_ptr<Entity> GetEntity();
-		std::shared_ptr<Application> GetApplication();
-		std::shared_ptr<ResourceManager> GetResources();
+			/**
+			*Returns the entity that the component is attached to.
+			*/
+			std::shared_ptr<Entity> GetEntity();
+			/**
+			*Returns the application object.
+			*/
+			std::shared_ptr<Application> GetApplication();
+			/**
+			*Returns the resource manager object for use in loading resources.
+			*/
+			std::shared_ptr<ResourceManager> GetResources();
 	};
 }

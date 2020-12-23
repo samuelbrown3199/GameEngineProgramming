@@ -8,5 +8,6 @@
 #include "Renderer.h"
 #include "Transform.h"
 #include "TriangleRenderer.h"
+#include "Shader.h"
 
 #endif
