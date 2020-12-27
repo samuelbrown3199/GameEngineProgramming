@@ -28,7 +28,7 @@ int main()
 
 	app->AddCamera(cam);
 
-	app->Start();
+	app->MainLoop();
 
 	return 0;
 }

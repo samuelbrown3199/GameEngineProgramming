@@ -4,6 +4,9 @@
 
 namespace myengine
 {
+	/**
+	*Stores model data.
+	*/
 	class Model : public Resource
 	{
 	private:

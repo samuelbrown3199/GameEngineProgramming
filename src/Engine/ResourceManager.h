@@ -12,6 +12,9 @@ namespace myengine
 	class ResourceManager
 	{
 	private:
+		/**
+		*Stores all currently loaded resources.
+		*/
 		std::vector<std::shared_ptr<Resource>> resources;
 
 	public:

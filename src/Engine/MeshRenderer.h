@@ -25,9 +25,13 @@ namespace myengine
 		*Loads the model at the path and sets it as the model.
 		*/
 		void SetModel(std::string modelPath);
-
+		/**
+		*Sets the shader of the mesh renderer.
+		*/
 		void SetShader(std::shared_ptr<Shader>sha);
-
+		/**
+		*Sets the texture of the mesh renderer.
+		*/
 		void SetTexture(std::shared_ptr <Texture> tex);
 
 	private:
