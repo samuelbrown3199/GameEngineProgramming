@@ -12,9 +12,9 @@ namespace myengine
 	class Model;
 	
 	/**
-	Renderer component. Renders a mesh.
+	MeshRenderer component. Renders a mesh.
 	*/
-	class Renderer : public Component
+	class MeshRenderer : public Component
 	{
 		/**
 		*Renders the mesh with the texture.

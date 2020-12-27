@@ -16,7 +16,7 @@ int main()
 	{
 		std::shared_ptr<Entity> tri = app->AddEntity();
 		tri->GetComponent<Transform>()->SetPosition(glm::vec3(0, 0, -10 * i));
-		std::shared_ptr<Renderer> pc = tri->AddComponent<Renderer>();
+		std::shared_ptr<MeshRenderer> pc = tri->AddComponent<MeshRenderer>();
 		pc->SetModel("cube.obj");
 		pc->SetShader(shader);
 		pc->SetTexture(texture);

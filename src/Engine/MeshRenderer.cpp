@@ -1,4 +1,4 @@
-#include "Renderer.h"
+#include "MeshRenderer.h"
 
 #include "Application.h"
 #include "Camera.h"
@@ -12,7 +12,7 @@
 
 namespace myengine
 {
-	void Renderer::onRender()
+	void MeshRenderer::onRender()
 	{
 		if (shader)
 		{
@@ -31,17 +31,17 @@ namespace myengine
 		}
 	}
 
-	void Renderer::SetModel(std::string modelPath)
+	void MeshRenderer::SetModel(std::string modelPath)
 	{
 		model = GetResources()->LoadResource<Model>(modelPath);
 	}
 
-	void Renderer::SetShader(std::shared_ptr<Shader>sha)
+	void MeshRenderer::SetShader(std::shared_ptr<Shader>sha)
 	{
 		shader = sha;
 	}
 
-	void Renderer::SetTexture(std::shared_ptr <Texture> tex)
+	void MeshRenderer::SetTexture(std::shared_ptr <Texture> tex)
 	{
 		texture = tex;
 	}

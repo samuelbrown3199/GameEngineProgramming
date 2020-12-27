@@ -56,8 +56,8 @@ add_library(myengine
 	src/Engine/Shader.cpp
 	src/Engine/TriangleRenderer.h
 	src/Engine/TriangleRenderer.cpp
-	src/Engine/Renderer.h
-	src/Engine/Renderer.cpp
+	src/Engine/MeshRenderer.h
+	src/Engine/MeshRenderer.cpp
 	src/Engine/Transform.h
 	src/Engine/Transform.cpp
 	src/Engine/InputManager.h

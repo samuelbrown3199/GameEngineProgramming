@@ -5,7 +5,7 @@
 #include "Camera.h"
 #include "Component.h"
 #include "Entity.h"
-#include "Renderer.h"
+#include "MeshRenderer.h"
 #include "Transform.h"
 #include "TriangleRenderer.h"
 #include "Shader.h"
