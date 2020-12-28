@@ -18,6 +18,23 @@ namespace myengine
 		std::shared_ptr<Application> rtn(new Application());
 		rtn->self = rtn;
 
+		rtn->device = alcOpenDevice(NULL);
+		if (!rtn->device)
+		{
+			throw std::exception();
+		}
+		rtn->audioContext = alcCreateContext(rtn->device, NULL);
+		if (!rtn->audioContext)
+		{
+			alcCloseDevice(rtn->device);
+			throw std::exception();
+		}
+		if (!alcMakeContextCurrent(rtn->audioContext))
+		{
+			alcDestroyContext(rtn->audioContext);
+			alcCloseDevice(rtn->device);
+			throw std::exception();
+		}
 		rtn->resources = std::make_shared<ResourceManager>();
 		rtn->screen = std::make_shared<Screen>();
 
@@ -34,7 +51,7 @@ namespace myengine
 		return rtn;
 	}
 
-	void Application::Start()
+	void Application::MainLoop()
 	{
 		SDL_Event e = { 0 };
 

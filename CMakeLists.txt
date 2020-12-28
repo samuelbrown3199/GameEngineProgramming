@@ -68,7 +68,7 @@ add_library(myengine
 )
 
 
-target_link_libraries(myengine rend SDL2)
+target_link_libraries(myengine rend SDL2 glew32 opengl32 openal32)
 
 add_executable(demo
 	src/TechDemo/main.cpp

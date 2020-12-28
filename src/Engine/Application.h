@@ -4,6 +4,8 @@
 
 #include <SDL.h>
 #include <GL/glew.h>
+#include <AL/al.h>
+#include <AL/alc.h>
 
 namespace myengine
 {
@@ -19,6 +21,8 @@ namespace myengine
 	private:
 		Application();
 
+		ALCdevice* device;
+		ALCcontext* audioContext;
 		/**
 		*Stores a list of the current entities in the scene.
 		*/

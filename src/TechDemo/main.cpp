@@ -12,7 +12,7 @@ int main()
 	std::shared_ptr<Shader> shader = std::make_shared <Shader>("standard.vs", "standard.fs");
 	std::shared_ptr<Texture> texture = app->GetResources()->LoadResource<Texture>("test.png");
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		std::shared_ptr<Entity> tri = app->AddEntity();
 		tri->GetComponent<Transform>()->SetPosition(glm::vec3(0, 0, -10 * i));
