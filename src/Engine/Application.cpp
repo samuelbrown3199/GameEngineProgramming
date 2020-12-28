@@ -18,21 +18,24 @@ namespace myengine
 		std::shared_ptr<Application> rtn(new Application());
 		rtn->self = rtn;
 
-		rtn->device = alcOpenDevice(NULL);
-		if (!rtn->device)
+		rtn->audioDevice = alcOpenDevice(NULL);
+		if (!rtn->audioDevice)
 		{
+			std::cout << "Application failed to initialize audio device!" << std::endl;
 			throw std::exception();
 		}
-		rtn->audioContext = alcCreateContext(rtn->device, NULL);
+		rtn->audioContext = alcCreateContext(rtn->audioDevice, NULL);
 		if (!rtn->audioContext)
 		{
-			alcCloseDevice(rtn->device);
+			std::cout << "Application failed to initialize audio context!" << std::endl;
+			alcCloseDevice(rtn->audioDevice);
 			throw std::exception();
 		}
 		if (!alcMakeContextCurrent(rtn->audioContext))
 		{
+			std::cout << "Application failed to assign audio context!" << std::endl;
 			alcDestroyContext(rtn->audioContext);
-			alcCloseDevice(rtn->device);
+			alcCloseDevice(rtn->audioDevice);
 			throw std::exception();
 		}
 		rtn->resources = std::make_shared<ResourceManager>();

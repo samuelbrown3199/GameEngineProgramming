@@ -21,7 +21,13 @@ namespace myengine
 	private:
 		Application();
 
-		ALCdevice* device;
+		/**
+		*Stores a pointer to the current audio device.
+		*/
+		ALCdevice* audioDevice;
+		/**
+		*Stores a pointer to the current audio context.
+		*/
 		ALCcontext* audioContext;
 		/**
 		*Stores a list of the current entities in the scene.
@@ -39,7 +45,9 @@ namespace myengine
 		*Stores information about the screen.
 		*/
 		std::shared_ptr<Screen> screen;
-
+		/**
+		*Stores a pointer to the application window.
+		*/
 		SDL_Window* window;
 		/**
 		*Determines whether the main engine loop should run.
