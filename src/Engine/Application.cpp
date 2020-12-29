@@ -12,7 +12,7 @@ namespace myengine
 
 	}
 
-	std::shared_ptr<Application> Application::Initialise()
+	std::shared_ptr<Application> Application::Initialise(std::string windowName)
 	{
 		//std::shared_ptr<Application> rtn = std::make_shared<Application>();
 		std::shared_ptr<Application> rtn(new Application());
@@ -22,26 +22,23 @@ namespace myengine
 		if (!rtn->audioDevice)
 		{
 			std::cout << "Application failed to initialize audio device!" << std::endl;
-			throw std::exception();
 		}
 		rtn->audioContext = alcCreateContext(rtn->audioDevice, NULL);
 		if (!rtn->audioContext)
 		{
 			std::cout << "Application failed to initialize audio context!" << std::endl;
 			alcCloseDevice(rtn->audioDevice);
-			throw std::exception();
 		}
 		if (!alcMakeContextCurrent(rtn->audioContext))
 		{
 			std::cout << "Application failed to assign audio context!" << std::endl;
 			alcDestroyContext(rtn->audioContext);
 			alcCloseDevice(rtn->audioDevice);
-			throw std::exception();
 		}
 		rtn->resources = std::make_shared<ResourceManager>();
 		rtn->screen = std::make_shared<Screen>();
 
-		rtn->window = SDL_CreateWindow("Triangle", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, rtn->screen->GetScreenWidth(), rtn->screen->GetScreenHeight(), SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
+		rtn->window = SDL_CreateWindow(windowName.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, rtn->screen->GetScreenWidth(), rtn->screen->GetScreenHeight(), SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 		if (!SDL_GL_CreateContext(rtn->window))
 		{
 			throw std::exception();

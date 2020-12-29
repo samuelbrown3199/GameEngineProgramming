@@ -1,6 +1,7 @@
 #include <exception>
 #include <memory>
 #include <vector>
+#include <string>
 
 #include <SDL.h>
 #include <GL/glew.h>
@@ -62,7 +63,7 @@ namespace myengine
 		/**
 		*Initializes the engine, starting required libraries, and making a window.
 		*/
-		static std::shared_ptr<Application> Initialise();
+		static std::shared_ptr<Application> Initialise(std::string windowName);
 		/**
 		*Starts the main engine loop.
 		*/

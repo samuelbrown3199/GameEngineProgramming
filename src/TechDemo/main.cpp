@@ -7,7 +7,7 @@
 using namespace myengine;
 int main()
 {
-	std::shared_ptr<Application> app = Application::Initialise();
+	std::shared_ptr<Application> app = Application::Initialise("Tech Demo");
 
 	std::shared_ptr<Shader> shader = std::make_shared <Shader>("standard.vs", "standard.fs");
 	std::shared_ptr<Texture> texture = app->GetResources()->LoadResource<Texture>("test.png");
