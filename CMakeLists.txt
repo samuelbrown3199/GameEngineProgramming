@@ -32,6 +32,8 @@ add_library(myengine
 	src/Engine/Model.cpp
 	src/Engine/Texture.h
 	src/Engine/Texture.cpp
+	src/Engine/AudioClip.h
+	src/Engine/AudioClip.cpp
 	src/Engine/Entity.h
 	src/Engine/Entity.cpp
 	src/Engine/Component.h
