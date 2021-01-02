@@ -1,6 +1,7 @@
 #include <Engine/MegaHeader.h>
 #include <Engine/Texture.h>
 #include <Engine/ResourceManager.h>
+#include <Engine/AudioClip.h>
 
 #include "Player.h"
 
@@ -11,6 +12,7 @@ int main()
 
 	std::shared_ptr<Shader> shader = std::make_shared <Shader>("standard.vs", "standard.fs");
 	std::shared_ptr<Texture> texture = app->GetResources()->LoadResource<Texture>("test.png");
+	//std::shared_ptr<AudioClip> audioClip = app->GetResources()->LoadResource<AudioClip>("testsound.ogg");
 
 	for (int i = 0; i < 100; i++)
 	{

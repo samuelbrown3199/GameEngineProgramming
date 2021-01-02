@@ -50,6 +50,10 @@ add_library(myengine
 	src/Engine/InputManager.cpp
 	src/Engine/Camera.h
 	src/Engine/Camera.cpp
+	src/Engine/Physics.h
+	src/Engine/Physics.cpp
+	src/Engine/PhysicsBody.h
+	src/Engine/PhysicsBody.cpp
 	src/Engine/MegaHeader.h
 )
 
