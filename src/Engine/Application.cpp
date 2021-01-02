@@ -81,6 +81,7 @@ namespace myengine
 				entities.at(ei)->Render();
 			}
 			SDL_GL_SwapWindow(window);
+			Physics::deltaT++;
 		}
 	}
 

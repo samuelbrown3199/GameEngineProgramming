@@ -13,6 +13,7 @@ namespace myengine
 	*/
 	class Physics
 	{
+	public:
 		const static double G;
 		const static double g;
 		static float deltaT;

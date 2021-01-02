@@ -8,6 +8,8 @@
 #include <AL/al.h>
 #include <AL/alc.h>
 
+#include "Physics.h"
+
 namespace myengine
 {
 	class Camera;

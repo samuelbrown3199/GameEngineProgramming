@@ -5,6 +5,7 @@ namespace myengine
 
 	const double Physics::G = 0.0000000000667;
 	const double Physics::g = 9.80;
+	float Physics::deltaT = 0;
 
 	//Vector Maths
 	glm::vec3 Physics::Calculate3DVector(const glm::vec3& i_point1,
