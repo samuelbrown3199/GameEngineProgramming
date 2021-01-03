@@ -5,7 +5,7 @@ namespace myengine
 
 	const double Physics::G = 0.0000000000667;
 	const double Physics::g = 9.80;
-	float Physics::deltaT = 0;
+	float Physics::deltaT = 0.1;
 
 	//Vector Maths
 	glm::vec3 Physics::Calculate3DVector(const glm::vec3& i_point1,
@@ -144,17 +144,16 @@ namespace myengine
 		double force = i_Mass * i_Acceleration;
 		return force;
 	}
-	double Physics::FreeFallVelocityDueToGravity(const double& i_time)
+	double Physics::FreeFallVelocityDueToGravity()
 	{
-		double velocity = g * i_time;
+		double velocity = g * deltaT;
 		return velocity;
 	}
-	double Physics::FreeFallVelocityWithDrag(const double& i_time,
-		const double& i_mass, const double& i_AirDensity, const double& i_DragCoefficient,
+	double Physics::FreeFallVelocityWithDrag(const double& i_mass, const double& i_AirDensity, const double& i_DragCoefficient,
 		const double& i_Area)
 	{
 		double tempVelocity = ComputeTerminalVelocity(i_mass, i_AirDensity, i_DragCoefficient, i_Area);
-		double outputVelocity = tanh((g * i_time) / tempVelocity);
+		double outputVelocity = tanh((g * deltaT) / tempVelocity);
 		outputVelocity = -tempVelocity * outputVelocity;
 
 		return outputVelocity;

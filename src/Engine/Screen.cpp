@@ -22,6 +22,6 @@ int Screen::GetScreenWidth()
 
 glm::mat4 Screen::GetPerspective()
 {
-	glm::mat4 perspective = glm::perspective(glm::radians(45.0f), (float)screenHeight / (float)screenWidth, 0.1f, 100.0f);
+	glm::mat4 perspective = glm::perspective(glm::radians(45.0f), (float)screenHeight / (float)screenWidth, 0.1f, 1000.0f);
 	return perspective;
 }

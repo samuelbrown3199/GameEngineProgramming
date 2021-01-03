@@ -1,3 +1,5 @@
+#include <chrono>
+
 #include "Application.h"
 #include "Camera.h"
 #include "ResourceManager.h"
@@ -59,8 +61,14 @@ namespace myengine
 		glEnable(GL_DEPTH_TEST);
 		glClearColor(0.0f, 0.45f, 0.45f, 1.0f);
 
+		Uint32 frameStart;
+
 		while (loop)
 		{
+			frameStart = SDL_GetTicks();
+
+			std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+
 			while (SDL_PollEvent(&e) != 0)
 			{
 				if (e.type == SDL_QUIT)
@@ -81,7 +89,10 @@ namespace myengine
 				entities.at(ei)->Render();
 			}
 			SDL_GL_SwapWindow(window);
-			Physics::deltaT++;
+
+			Physics::deltaT = SDL_GetTicks() - frameStart;
+			double fps = 1000.0f / Physics::deltaT;
+			//std::cout << "FPS: " << fps << " and delta time is " << Physics::deltaT << std::endl;
 		}
 	}
 

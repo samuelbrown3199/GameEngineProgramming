@@ -37,6 +37,10 @@ namespace myengine
 		*/
 		void SetRotation(glm::vec3 rot);
 		/**
+		*Sets the scale of the transform to parameter sca.
+		*/
+		void SetScale(glm::vec3 sca);
+		/**
 		*Returns the position of the transform.
 		*/
 		glm::vec3 GetPosition();

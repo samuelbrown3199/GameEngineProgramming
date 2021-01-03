@@ -130,11 +130,11 @@ namespace myengine
 		/**
 		*Computes the freefall velocity due to gravity without drag.
 		*/
-		double static FreeFallVelocityDueToGravity(const double& i_time);
+		double static FreeFallVelocityDueToGravity();
 		/**
 		*Computes the freefall velocity due to gravity with drag.
 		*/
-		double static FreeFallVelocityWithDrag(const double& i_time, const double& i_mass,
+		double static FreeFallVelocityWithDrag(const double& i_mass,
 			const double& i_AirDensity, const double& i_DragCoefficient, const double& i_Area);
 		/**
 		*Computes the terminal velocity of an object.

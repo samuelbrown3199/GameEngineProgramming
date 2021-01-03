@@ -10,7 +10,7 @@ private:
 	std::shared_ptr<Camera> cam;
 	std::shared_ptr<Transform> transform;
 
-	float movementSpeed = 0.1f;
+	float movementSpeed = 1.0f;
 	bool firstMouse = true;
 	float pitch = 0.0f, yaw = -90.0f;
 

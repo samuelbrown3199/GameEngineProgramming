@@ -62,6 +62,9 @@ namespace myengine
 		void UpdateScreenSize();
 
 	public:
+
+		double frameRate;
+
 		/**
 		*Initializes the engine, starting required libraries, and making a window.
 		*/

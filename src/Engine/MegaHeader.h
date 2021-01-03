@@ -8,6 +8,7 @@
 #include "MeshRenderer.h"
 #include "Transform.h"
 #include "TriangleRenderer.h"
+#include "PhysicsBody.h"
 #include "Shader.h"
 
 #endif

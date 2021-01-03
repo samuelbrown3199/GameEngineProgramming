@@ -16,6 +16,11 @@ void Transform::SetRotation(glm::vec3 rot)
 	rotation = rot;
 }
 
+void Transform::SetScale(glm::vec3 sca)
+{
+	scale = sca;
+}
+
 glm::vec3 Transform::GetPosition()
 {
 	return position;
