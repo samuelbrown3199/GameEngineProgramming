@@ -4,6 +4,7 @@
 #include <string>
 
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <GL/glew.h>
 #include <AL/al.h>
 #include <AL/alc.h>
@@ -53,6 +54,10 @@ namespace myengine
 		*/
 		SDL_Window* window;
 		/**
+		*SDL renderer, used for handling and rendering UI elements.
+		*/
+		SDL_Renderer* sdlRenderer;
+		/**
 		*Determines whether the main engine loop should run.
 		*/
 		bool loop = true;
@@ -62,9 +67,10 @@ namespace myengine
 		void UpdateScreenSize();
 
 	public:
-
+		/**
+		*Stores the current framerate.
+		*/
 		double frameRate;
-
 		/**
 		*Initializes the engine, starting required libraries, and making a window.
 		*/

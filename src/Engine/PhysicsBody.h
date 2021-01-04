@@ -11,7 +11,9 @@ namespace myengine
 	class PhysicsBody : public Component
 	{
 		std::shared_ptr<Transform> transform;
-		double velX = 0, velY = 0, velZ = 0;
+		glm::dvec3 bodyVelocity = glm::dvec3(0, 0, 0);
+		glm::dvec3 angularVelocity = glm::dvec3(0, 0, 0);
+		float mass = 20, dragCoeffient = 1.05f, area = 1.0f;
 
 	public:
 		void onInitialize();

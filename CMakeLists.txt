@@ -34,10 +34,16 @@ add_library(myengine
 	src/Engine/Texture.cpp
 	src/Engine/AudioClip.h
 	src/Engine/AudioClip.cpp
+	src/Engine/Font.h
+	src/Engine/Font.cpp
 	src/Engine/Entity.h
 	src/Engine/Entity.cpp
 	src/Engine/Component.h
 	src/Engine/Component.cpp
+	src/Engine/UiComponent.h
+	src/Engine/UiComponent.cpp
+	src/Engine/UiSystem.h
+	src/Engine/UiSystem.cpp
 	src/Engine/Shader.h
 	src/Engine/Shader.cpp
 	src/Engine/TriangleRenderer.h
@@ -57,8 +63,7 @@ add_library(myengine
 	src/Engine/MegaHeader.h
 )
 
-
-target_link_libraries(myengine SDL2 glew32 opengl32 openal32)
+target_link_libraries(myengine SDL2 SDL2_ttf glew32 opengl32 openal32)
 
 add_executable(demo
 	src/TechDemo/main.cpp

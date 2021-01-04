@@ -33,7 +33,7 @@ int main()
 	fc->SetTexture(texture);
 
 	std::shared_ptr<Entity> physicsTest = app->AddEntity();
-	physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(0, 50, 0));
+	physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(0, 50, -10));
 	std::shared_ptr<MeshRenderer> pc = physicsTest->AddComponent<MeshRenderer>();
 	pc->SetModel("cube.obj");
 	pc->SetShader(shader);
@@ -41,6 +41,7 @@ int main()
 	physicsTest->AddComponent<PhysicsBody>();
 
 	std::shared_ptr<Entity> player = app->AddEntity();
+	player->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, 0));
 	std::shared_ptr<Camera> cam = player->AddComponent<Camera>();
 	std::shared_ptr<Player> pl = player->AddComponent<Player>();
 

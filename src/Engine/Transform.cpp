@@ -31,6 +31,11 @@ glm::vec3 Transform::GetRotation()
 	return rotation;
 }
 
+glm::vec3 Transform::GetScale()
+{
+	return scale;
+}
+
 glm::mat4 Transform::GetModelMatrix()
 {
 	glm::mat4 rtn(1.0f);

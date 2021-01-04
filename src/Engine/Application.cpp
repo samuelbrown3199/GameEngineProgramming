@@ -20,6 +20,11 @@ namespace myengine
 		std::shared_ptr<Application> rtn(new Application());
 		rtn->self = rtn;
 
+		if (SDL_Init(SDL_INIT_EVERYTHING) == -1) //initialise SDL, if it fails, exit the program
+		{
+			std::cout << "Failed to initialise SDL: " << SDL_GetError() << std::endl;
+			throw std::exception();
+		}
 		rtn->audioDevice = alcOpenDevice(NULL);
 		if (!rtn->audioDevice)
 		{
@@ -37,6 +42,11 @@ namespace myengine
 			alcDestroyContext(rtn->audioContext);
 			alcCloseDevice(rtn->audioDevice);
 		}
+		if (TTF_Init() == -1) //initialise TTF for use with fonts and text later, if it couldnt initialise, close the program
+		{
+			std::cout << "SDL_TTF couldn't intialise" << std::endl;
+			throw std::exception();
+		}
 		rtn->resources = std::make_shared<ResourceManager>();
 		rtn->screen = std::make_shared<Screen>();
 
@@ -47,6 +57,12 @@ namespace myengine
 		}
 		if (glewInit() != GLEW_OK)
 		{
+			throw std::exception();
+		}
+		rtn->sdlRenderer = SDL_CreateRenderer(rtn->window, -1, SDL_RENDERER_ACCELERATED);
+		if (rtn->sdlRenderer == nullptr)
+		{
+			std::cout << "Failed to create renderer: " << SDL_GetError() << std::endl;
 			throw std::exception();
 		}
 
@@ -90,9 +106,11 @@ namespace myengine
 			}
 			SDL_GL_SwapWindow(window);
 
-			Physics::deltaT = SDL_GetTicks() - frameStart;
-			double fps = 1000.0f / Physics::deltaT;
-			//std::cout << "FPS: " << fps << " and delta time is " << Physics::deltaT << std::endl;
+			double frameTime = SDL_GetTicks() - frameStart;
+			double fps = 1000.0f / frameTime;
+			Physics::deltaT = 1.0f / fps;
+
+			std::cout << "FPS: " << fps << std::endl;
 		}
 	}
 

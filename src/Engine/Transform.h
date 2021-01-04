@@ -49,6 +49,10 @@ namespace myengine
 		*/
 		glm::vec3 GetRotation();
 		/**
+		*Returns the scale of the transform.
+		*/
+		glm::vec3 GetScale();
+		/**
 		*Generates a model matrix for use in rendering.
 		*/
 		glm::mat4 GetModelMatrix();

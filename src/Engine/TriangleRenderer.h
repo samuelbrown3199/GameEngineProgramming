@@ -15,11 +15,11 @@ namespace myengine
 	{
 	private:
 		/**
-		*The current shader of the triangle renderer.
+		*The current shader of the triangle sdlRenderer.
 		*/
 		std::shared_ptr<Shader> shader;
 		/**
-		*The current texture of the triangle renderer.
+		*The current texture of the triangle sdlRenderer.
 		*/
 		std::shared_ptr<Texture> texture;
 

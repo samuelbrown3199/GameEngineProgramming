@@ -26,11 +26,11 @@ namespace myengine
 		*/
 		void SetModel(std::string modelPath);
 		/**
-		*Sets the shader of the mesh renderer.
+		*Sets the shader of the mesh sdlRenderer.
 		*/
 		void SetShader(std::shared_ptr<Shader>sha);
 		/**
-		*Sets the texture of the mesh renderer.
+		*Sets the texture of the mesh sdlRenderer.
 		*/
 		void SetTexture(std::shared_ptr <Texture> tex);
 
