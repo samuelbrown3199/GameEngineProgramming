@@ -35,5 +35,9 @@ namespace myengine
 		*Generates a perspective matrix based on the screen information.
 		*/
 		glm::mat4 GetPerspective();
+		/**
+		*Generates an orthographic matrix based on the screen information.
+		*/
+		glm::mat4 GetOrthographic();
 	};
 }

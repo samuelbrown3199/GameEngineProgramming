@@ -1,5 +1,8 @@
-#include <GL/glew.h>
+#pragma once
+#ifndef TEXTURE_H_
+#define TEXTURE_H_
 
+#include <GL/glew.h>
 
 #include "Resource.h"
 
@@ -24,3 +27,5 @@ namespace myengine
 		void OnLoad();
 	};
 }
+
+#endif

@@ -1,9 +1,11 @@
 #include <chrono>
 
 #include "Application.h"
+#include "InputManager.h"
 #include "Camera.h"
 #include "ResourceManager.h"
 #include "Screen.h"
+#include "Shader.h"
 #include "Entity.h"
 #include "Transform.h"
 
@@ -20,11 +22,6 @@ namespace myengine
 		std::shared_ptr<Application> rtn(new Application());
 		rtn->self = rtn;
 
-		if (SDL_Init(SDL_INIT_EVERYTHING) == -1) //initialise SDL, if it fails, exit the program
-		{
-			std::cout << "Failed to initialise SDL: " << SDL_GetError() << std::endl;
-			throw std::exception();
-		}
 		rtn->audioDevice = alcOpenDevice(NULL);
 		if (!rtn->audioDevice)
 		{
@@ -59,12 +56,9 @@ namespace myengine
 		{
 			throw std::exception();
 		}
-		rtn->sdlRenderer = SDL_CreateRenderer(rtn->window, -1, SDL_RENDERER_ACCELERATED);
-		if (rtn->sdlRenderer == nullptr)
-		{
-			std::cout << "Failed to create renderer: " << SDL_GetError() << std::endl;
-			throw std::exception();
-		}
+
+		rtn->standardShader = std::make_shared <Shader>("standard.vs", "standard.fs");
+		rtn->uiShader = std::make_shared <Shader>("ui.vs", "ui.fs");
 
 		return rtn;
 	}
@@ -93,24 +87,30 @@ namespace myengine
 				}
 			}
 			UpdateScreenSize();
+			InputManager::GetMousePosition();
 
 			for (size_t ei = 0; ei < entities.size(); ei++)
 			{
 				entities.at(ei)->Tick();
 			}
-
+			for (size_t ui = 0; ui < uis.size(); ui++)
+			{
+				uis.at(ui)->UpdateUI();
+			}
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			for (size_t ei = 0; ei < entities.size(); ei++)
 			{
 				entities.at(ei)->Render();
+			}
+			for (size_t ui = 0; ui < uis.size(); ui++)
+			{
+				uis.at(ui)->RenderUI();
 			}
 			SDL_GL_SwapWindow(window);
 
 			double frameTime = SDL_GetTicks() - frameStart;
 			double fps = 1000.0f / frameTime;
 			Physics::deltaT = 1.0f / fps;
-
-			std::cout << "FPS: " << fps << std::endl;
 		}
 	}
 

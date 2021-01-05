@@ -1,3 +1,7 @@
+#pragma once
+#ifndef RESOURCEMANAGER_H_
+#define RESOURCEMANAGER_H_
+
 #include <vector>
 #include <memory>
 #include <string>
@@ -45,3 +49,5 @@ namespace myengine
 		}
 	};
 }
+
+#endif

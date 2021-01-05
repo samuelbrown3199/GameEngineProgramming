@@ -9,15 +9,30 @@ namespace myengine
 		return application.lock();
 	}
 
+	void UiSystem::InitializeUI()
+	{
+
+	}
+
 	void UiSystem::UpdateUI()
+	{
+		if (open)
+		{
+			OnUpdate();
+		}
+	}
+	void UiSystem::OnUpdate()
 	{
 
 	}
 	void UiSystem::RenderUI()
 	{
-		for (size_t ui = 0; ui < uiElements.size(); ui++)
-		{
-			uiElements.at(ui)->RenderUiElement();
-		}
+		/*if (open)
+		{*/
+			for (size_t ui = 0; ui < uiElements.size(); ui++)
+			{
+				uiElements.at(ui)->RenderUiElement();
+			}
+		//}
 	}
 }

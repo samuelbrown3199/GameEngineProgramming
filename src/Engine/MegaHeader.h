@@ -10,5 +10,7 @@
 #include "TriangleRenderer.h"
 #include "PhysicsBody.h"
 #include "Shader.h"
+#include "UiSystem.h"
+#include "UiComponent.h"
 
 #endif

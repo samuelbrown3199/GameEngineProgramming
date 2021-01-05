@@ -1,3 +1,7 @@
+#pragma once
+#ifndef APPLICATION_H_
+#define APPLICATION_H_
+
 #include <exception>
 #include <memory>
 #include <vector>
@@ -10,6 +14,7 @@
 #include <AL/alc.h>
 
 #include "Physics.h"
+#include "UiSystem.h"
 
 namespace myengine
 {
@@ -17,6 +22,7 @@ namespace myengine
 	class ResourceManager;
 	class Screen;
 	class Entity;
+	class Shader;
 	/**
 	*Setups the engine for use in simulations or games.
 	*/
@@ -38,6 +44,10 @@ namespace myengine
 		*/
 		std::vector<std::shared_ptr<Entity>> entities;
 		/**
+		*Stores a list of UIs
+		*/
+		std::vector<std::shared_ptr<UiSystem>> uis;
+		/**
 		*Stores a weak pointer to itself.
 		*/
 		std::weak_ptr<Application> self;
@@ -54,10 +64,6 @@ namespace myengine
 		*/
 		SDL_Window* window;
 		/**
-		*SDL renderer, used for handling and rendering UI elements.
-		*/
-		SDL_Renderer* sdlRenderer;
-		/**
 		*Determines whether the main engine loop should run.
 		*/
 		bool loop = true;
@@ -71,6 +77,9 @@ namespace myengine
 		*Stores the current framerate.
 		*/
 		double frameRate;
+
+		std::shared_ptr<Shader> standardShader;
+		std::shared_ptr<Shader> uiShader;
 		/**
 		*Initializes the engine, starting required libraries, and making a window.
 		*/
@@ -99,5 +108,37 @@ namespace myengine
 		*Tells the engine what to use as the main camera.
 		*/
 		void AddCamera(std::shared_ptr<Camera> cam);
+		/**
+		*Creates, initializes and adds a UI to the application.
+		*/
+		template<typename T>
+		std::shared_ptr<T> BindUI()
+		{
+
+			std::shared_ptr<T> ui = std::make_shared<T>();
+			ui->InitializeUI();
+			ui->application = self;
+			ui->self = ui;
+
+			uis.push_back(ui);
+			return ui;
+		}
+		template<typename T>
+		std::shared_ptr<T> GetUI()
+		{
+			for (size_t ui = 0; ui < uis.size(); ui++)
+			{
+				std::shared_ptr<T> rtn = std::dynamic_pointer_cast(uis.at(ui));
+				if (rtn)
+				{
+					return rtn;
+				}
+			}
+
+			std::cout << "Could not find UI of type!" << std::endl;
+			throw std::exception();
+		}
 	};
 }
+
+#endif

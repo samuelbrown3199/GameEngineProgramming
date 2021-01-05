@@ -10,7 +10,6 @@ int main()
 {
 	std::shared_ptr<Application> app = Application::Initialise("Tech Demo");
 
-	std::shared_ptr<Shader> shader = std::make_shared <Shader>("standard.vs", "standard.fs");
 	std::shared_ptr<Texture> texture = app->GetResources()->LoadResource<Texture>("test.png");
 	//std::shared_ptr<AudioClip> audioClip = app->GetResources()->LoadResource<AudioClip>("testsound.ogg");
 
@@ -29,23 +28,33 @@ int main()
 	floor->GetComponent<Transform>()->SetScale(glm::vec3(1000, 1, 1000));
 	std::shared_ptr<MeshRenderer> fc = floor->AddComponent<MeshRenderer>();
 	fc->SetModel("cube.obj");
-	fc->SetShader(shader);
+	fc->SetShader(app->standardShader);
 	fc->SetTexture(texture);
 
 	std::shared_ptr<Entity> physicsTest = app->AddEntity();
 	physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(0, 50, -10));
 	std::shared_ptr<MeshRenderer> pc = physicsTest->AddComponent<MeshRenderer>();
 	pc->SetModel("cube.obj");
-	pc->SetShader(shader);
+	pc->SetShader(app->standardShader);
 	pc->SetTexture(texture);
 	physicsTest->AddComponent<PhysicsBody>();
+
+
+	std::shared_ptr<Entity> quadTest = app->AddEntity();
+	quadTest->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, -5));
+	pc = quadTest->AddComponent<MeshRenderer>();
+	pc->SetModel("uiquad.obj");
+	pc->SetShader(app->standardShader);
+	pc->SetTexture(texture);
 
 	std::shared_ptr<Entity> player = app->AddEntity();
 	player->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, 0));
 	std::shared_ptr<Camera> cam = player->AddComponent<Camera>();
 	std::shared_ptr<Player> pl = player->AddComponent<Player>();
-
 	app->AddCamera(cam);
+
+	std::shared_ptr<UiSystem> testUI = app->BindUI<UiSystem>();
+	testUI->AddUiElement<UiComponent>();
 
 	app->MainLoop();
 
