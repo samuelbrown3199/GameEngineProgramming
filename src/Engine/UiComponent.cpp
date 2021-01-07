@@ -54,7 +54,5 @@ namespace myengine
 		glDrawArrays(GL_TRIANGLES, 0, uiQuad->drawCount);
 		glBindVertexArray(0);
 		glUseProgram(0);
-
-		std::cout << "Rendering ui element" << std::endl;
 	}
 }

@@ -9,6 +9,9 @@ include_directories(
 )
 
 if(MSVC)
+	set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MT")
+
 	include_directories(
 		contrib/msvc-windows-x86_64/include
 	)
@@ -60,10 +63,14 @@ add_library(myengine
 	src/Engine/Physics.cpp
 	src/Engine/PhysicsBody.h
 	src/Engine/PhysicsBody.cpp
+	src/Engine/AudioSource.h
+	src/Engine/AudioSource.cpp
+	src/Engine/AudioListener.h
+	src/Engine/AudioListener.cpp
 	src/Engine/MegaHeader.h
 )
 
-target_link_libraries(myengine SDL2 SDL2_ttf glew32 opengl32 openal32)
+target_link_libraries(myengine SDL2 SDL2_ttf glew32 opengl32 openal32 Bullet3Collision Bullet3Common Bullet3Dynamics Bullet3Geometry BulletCollision BulletDynamics LinearMath)
 
 add_executable(demo
 	src/TechDemo/main.cpp

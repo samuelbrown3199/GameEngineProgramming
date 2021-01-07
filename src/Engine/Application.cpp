@@ -107,6 +107,7 @@ namespace myengine
 				uis.at(ui)->RenderUI();
 			}
 			SDL_GL_SwapWindow(window);
+			resources->UnloadUnusedResources();
 
 			double frameTime = SDL_GetTicks() - frameStart;
 			double fps = 1000.0f / frameTime;

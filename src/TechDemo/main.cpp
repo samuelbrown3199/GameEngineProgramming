@@ -1,7 +1,8 @@
 #include <Engine/MegaHeader.h>
 #include <Engine/Texture.h>
 #include <Engine/ResourceManager.h>
-#include <Engine/AudioClip.h>
+#include <Engine/AudioSource.h>
+#include <Engine/AudioListener.h>
 
 #include "Player.h"
 
@@ -11,7 +12,6 @@ int main()
 	std::shared_ptr<Application> app = Application::Initialise("Tech Demo");
 
 	std::shared_ptr<Texture> texture = app->GetResources()->LoadResource<Texture>("test.png");
-	//std::shared_ptr<AudioClip> audioClip = app->GetResources()->LoadResource<AudioClip>("testsound.ogg");
 
 	/*for (int i = 0; i < 100; i++)
 	{
@@ -46,11 +46,18 @@ int main()
 	pc->SetModel("uiquad.obj");
 	pc->SetShader(app->standardShader);
 	pc->SetTexture(texture);
+	std::shared_ptr<AudioSource> au = quadTest->AddComponent<AudioSource>();
+	au->SetClip("music.ogg");
+	au->loop = true;
+	au->gain = 0.1;
+	au->Play();
 
 	std::shared_ptr<Entity> player = app->AddEntity();
 	player->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, 0));
 	std::shared_ptr<Camera> cam = player->AddComponent<Camera>();
 	std::shared_ptr<Player> pl = player->AddComponent<Player>();
+	player->AddComponent<AudioListener>();
+
 	app->AddCamera(cam);
 
 	std::shared_ptr<UiSystem> testUI = app->BindUI<UiSystem>();

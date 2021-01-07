@@ -1,3 +1,7 @@
+#pragma once
+#ifndef TRANSFORM_H_
+#define TRANSFORM_H_
+
 #include<glm/glm.hpp>
 #include <glm/ext.hpp>
 
@@ -58,3 +62,5 @@ namespace myengine
 		glm::mat4 GetModelMatrix();
 	};
 }
+
+#endif

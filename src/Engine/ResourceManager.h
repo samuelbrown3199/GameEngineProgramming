@@ -47,6 +47,11 @@ namespace myengine
 			resources.push_back(newResource);
 			return newResource;
 		}
+
+		/**
+		*Unloads resources whose use count is currently 1. This means that un-used resources are no longer kept in memory.
+		*/
+		void UnloadUnusedResources();
 	};
 }
 

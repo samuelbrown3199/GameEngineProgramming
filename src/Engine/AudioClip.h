@@ -1,3 +1,7 @@
+#pragma once
+#ifndef AUDIOCLIP_H_
+#define AUDIOCLIP_H_
+
 #include <string>
 #include <vector>
 
@@ -7,13 +11,21 @@
 
 namespace myengine
 {
+	/**
+	*Stores an audio file into memory.
+	*/
 	class AudioClip : public Resource
 	{
 	public:
-		ALuint audioClipID;
+		ALuint audioClipID = 0;
 		void OnLoad();
 
 	private:
-		void LoadOgg(std::string& fileDirectory, std::vector<char>& buffer, ALenum& format, ALsizei& freq);
+		/**
+		*Loads an ogg file.
+		*/
+		void LoadOgg(const std::string& fileDirectory, std::vector<char>& buffer, ALenum& format, ALsizei& freq);
 	};
 }
+
+#endif
