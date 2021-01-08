@@ -9,6 +9,9 @@ namespace myengine
 	class Transform;
 	class Collider;
 
+	/**
+	*Responsible to creating and adding a rigidbody to the bullet physics world simulation. The entity must have a collider added before adding the physics body component.
+	*/
 	class PhysicsBody : public Component
 	{
 		std::shared_ptr<Transform> transform;
@@ -16,8 +19,13 @@ namespace myengine
 
 	public:
 
+		/**
+		*Stores the rigidbody mass.
+		*/
 		btScalar mass;
-		btVector3 localInertia;
+		/**
+		*Stores a pointer to the rigidbody.
+		*/
 		btRigidBody* rigidBody;
 
 		void onInitialize(float _mass);

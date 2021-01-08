@@ -20,11 +20,12 @@ namespace myengine
 
 		mass = _mass;
 
+		btVector3 localInertia(0,0,0);
 		bool isDynamic = (mass != 0.f);
 		if (isDynamic)
+		{
 			collider->shape->calculateLocalInertia(mass, localInertia);
-
-
+		}
 		btDefaultMotionState* motionState = new btDefaultMotionState(bodyTransform);
 		btRigidBody::btRigidBodyConstructionInfo rbInfo(mass, motionState, collider->shape, localInertia);
 		rigidBody = new btRigidBody(rbInfo);
