@@ -13,6 +13,7 @@
 #include <AL/al.h>
 #include <AL/alc.h>
 
+
 #include "Physics.h"
 #include "UiSystem.h"
 
@@ -20,6 +21,7 @@ namespace myengine
 {
 	class Camera;
 	class ResourceManager;
+	class PhysicsWorld;
 	class Screen;
 	class Entity;
 	class Shader;
@@ -30,7 +32,6 @@ namespace myengine
 	{
 	private:
 		Application();
-
 		/**
 		*Stores a pointer to the current audio device.
 		*/
@@ -39,6 +40,10 @@ namespace myengine
 		*Stores a pointer to the current audio context.
 		*/
 		ALCcontext* audioContext;
+		/**
+		*Stores the physics settings for use in the bullet library.
+		*/
+		std::shared_ptr<PhysicsWorld> physicsWorld;
 		/**
 		*Stores a list of the current entities in the scene.
 		*/
@@ -100,6 +105,10 @@ namespace myengine
 		*Creates an entity and stores it in the entity list. Returns the created entity as a shared pointer.
 		*/
 		std::shared_ptr<Entity> AddEntity();
+		/**
+		*Returns the physics world.
+		*/
+		std::shared_ptr<PhysicsWorld> GetPhysicsWorld();
 		/**
 		*Stores the main camera.
 		*/

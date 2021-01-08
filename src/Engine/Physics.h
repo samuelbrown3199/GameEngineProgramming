@@ -9,7 +9,7 @@
 namespace myengine
 {
 	/**
-	*Contains mathematics to use in physics.
+	*Contains mathematics to use in physics. Un-used since using bullet
 	*/
 	class Physics
 	{

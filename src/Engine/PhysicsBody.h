@@ -1,22 +1,26 @@
 #include <iostream>
 
-#include "Component.h"
+#include <Bullet/btBulletDynamicsCommon.h>
 
-#include "Physics.h"
+#include "Component.h"
 
 namespace myengine
 {
 	class Transform;
+	class Collider;
 
 	class PhysicsBody : public Component
 	{
 		std::shared_ptr<Transform> transform;
-		glm::dvec3 bodyVelocity = glm::dvec3(0, 0, 0);
-		glm::dvec3 angularVelocity = glm::dvec3(0, 0, 0);
-		float mass = 20, dragCoeffient = 1.05f, area = 1.0f;
+		std::shared_ptr<Collider> collider;
 
 	public:
-		void onInitialize();
+
+		btScalar mass;
+		btVector3 localInertia;
+		btRigidBody* rigidBody;
+
+		void onInitialize(float _mass);
 		void onTick();
 	};
 }

@@ -4,6 +4,7 @@
 #include "InputManager.h"
 #include "Camera.h"
 #include "ResourceManager.h"
+#include "PhysicsWorld.h"
 #include "Screen.h"
 #include "Shader.h"
 #include "Entity.h"
@@ -56,6 +57,8 @@ namespace myengine
 		{
 			throw std::exception();
 		}
+
+		rtn->physicsWorld = PhysicsWorld::CreatePhysicsWorld();
 
 		rtn->standardShader = std::make_shared <Shader>("standard.vs", "standard.fs");
 		rtn->uiShader = std::make_shared <Shader>("ui.vs", "ui.fs");
@@ -112,7 +115,10 @@ namespace myengine
 			double frameTime = SDL_GetTicks() - frameStart;
 			double fps = 1000.0f / frameTime;
 			Physics::deltaT = 1.0f / fps;
+			physicsWorld->dynamicWorld->stepSimulation(Physics::deltaT);
 		}
+
+		physicsWorld->CleanupPhysicsWorld();
 	}
 
 	void Application::UpdateScreenSize()
@@ -121,6 +127,7 @@ namespace myengine
 		SDL_GetWindowSize(window, &w, &h);
 		screen->SetScreenHeight(h);
 		screen->SetScreenWidth(w);
+		glViewport(0, 0, screen->GetScreenWidth(), screen->GetScreenHeight());
 	}
 
 	std::shared_ptr<Screen> Application::GetScreen()
@@ -142,6 +149,11 @@ namespace myengine
 
 		entities.push_back(rtn);
 		return rtn;
+	}
+
+	std::shared_ptr<PhysicsWorld> Application::GetPhysicsWorld()
+	{
+		return physicsWorld;
 	}
 
 	void Application::AddCamera(std::shared_ptr<Camera> cam)

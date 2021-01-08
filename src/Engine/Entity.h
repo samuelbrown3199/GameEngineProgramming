@@ -33,6 +33,20 @@ namespace myengine
 			return rtn;
 		}
 		/**
+		*Adds a component of the passed type to the entity along with parameters.
+		*/
+		template<typename T, typename ... Args>
+		std::shared_ptr<T> AddComponent(Args&&... args)
+		{
+			std::shared_ptr<T> rtn = std::make_shared<T>();
+			rtn->entity = self;
+
+			components.push_back(rtn);
+			rtn->onInitialize(std::forward<Args>(args)...);
+
+			return rtn;
+		}
+		/**
 		*Returns the component of the passed type.
 		*/
 		template<typename T>

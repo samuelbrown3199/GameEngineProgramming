@@ -3,6 +3,7 @@
 #include <Engine/ResourceManager.h>
 #include <Engine/AudioSource.h>
 #include <Engine/AudioListener.h>
+#include <Engine/Collider.h>
 
 #include "Player.h"
 
@@ -30,6 +31,8 @@ int main()
 	fc->SetModel("cube.obj");
 	fc->SetShader(app->standardShader);
 	fc->SetTexture(texture);
+	floor->AddComponent<Collider>();
+	floor->AddComponent<PhysicsBody>(0);
 
 	std::shared_ptr<Entity> physicsTest = app->AddEntity();
 	physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(0, 50, -10));
@@ -37,7 +40,8 @@ int main()
 	pc->SetModel("cube.obj");
 	pc->SetShader(app->standardShader);
 	pc->SetTexture(texture);
-	physicsTest->AddComponent<PhysicsBody>();
+	physicsTest->AddComponent<Collider>();
+	physicsTest->AddComponent<PhysicsBody>(20);
 
 
 	std::shared_ptr<Entity> quadTest = app->AddEntity();

@@ -23,8 +23,6 @@ namespace myengine
 		alSource3f(sourceID, AL_VELOCITY, velocity.x, velocity.y, velocity.z);
 		
 		alSourcei(sourceID, AL_LOOPING, loop);
-		alSourcef(sourceID, AL_PITCH, pitch);
-		alSourcef(sourceID, AL_GAIN, gain);
 	}
 
 	void AudioSource::SetClip(std::string fileName)
@@ -34,6 +32,8 @@ namespace myengine
 
 	void AudioSource::Play()
 	{
+		alSourcef(sourceID, AL_PITCH, pitch);
+		alSourcef(sourceID, AL_GAIN, gain);
 		alSourcei(sourceID, AL_BUFFER, clip->audioClipID);
 		alSourcePlay(sourceID);
 	}

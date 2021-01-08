@@ -2,23 +2,44 @@
 
 #include "Entity.h"
 #include "Transform.h"
+#include "Collider.h"
+#include "Application.h"
+#include "PhysicsWorld.h"
 
 namespace myengine
 {
-	void PhysicsBody::onInitialize()
+	void PhysicsBody::onInitialize(float _mass)
 	{
 		transform = GetEntity()->GetComponent<Transform>();
+		collider = GetEntity()->GetComponent<Collider>();
+
+		btTransform bodyTransform;
+		bodyTransform.setIdentity();
+		bodyTransform.setOrigin(btVector3(transform->position.x, transform->position.y, transform->position.z));
+		bodyTransform.setRotation(btQuaternion(transform->rotation.x, transform->rotation.y, transform->rotation.z));
+
+		mass = _mass;
+
+		bool isDynamic = (mass != 0.f);
+		if (isDynamic)
+			collider->shape->calculateLocalInertia(mass, localInertia);
+
+
+		btDefaultMotionState* motionState = new btDefaultMotionState(bodyTransform);
+		btRigidBody::btRigidBodyConstructionInfo rbInfo(mass, motionState, collider->shape, localInertia);
+		rigidBody = new btRigidBody(rbInfo);
+
+		GetApplication()->GetPhysicsWorld()->AddRigidbody(rigidBody);
 	}
 
 	void PhysicsBody::onTick()
 	{
-		//calculate new position
-
-		bodyVelocity.y = Physics::FreeFallVelocityWithDrag(mass, 1.225, dragCoeffient, area);
-
-		glm::vec3 newPos(transform->position.x + bodyVelocity.x, transform->position.y + bodyVelocity.y, transform->position.z + bodyVelocity.z);
-		glm::vec3 newRot(transform->rotation.x + angularVelocity.x, transform->rotation.y + angularVelocity.y, transform->rotation.z + angularVelocity.z);
-		transform->SetPosition(newPos);
-		transform->SetRotation(newRot);
+		btTransform trans;
+		if (rigidBody && rigidBody->getMotionState())
+		{
+			rigidBody->getMotionState()->getWorldTransform(trans);
+			transform->SetPosition(glm::vec3(trans.getOrigin().getX(), trans.getOrigin().getY(), trans.getOrigin().getZ()));
+			transform->SetRotation(glm::vec3(trans.getRotation().getX(), trans.getRotation().getY(), trans.getRotation().getZ()));
+		}
 	}
 }

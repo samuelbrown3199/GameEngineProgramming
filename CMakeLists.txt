@@ -59,6 +59,10 @@ add_library(myengine
 	src/Engine/InputManager.cpp
 	src/Engine/Camera.h
 	src/Engine/Camera.cpp
+	src/Engine/PhysicsWorld.h
+	src/Engine/PhysicsWorld.cpp
+	src/Engine/Collider.h
+	src/Engine/Collider.cpp
 	src/Engine/Physics.h
 	src/Engine/Physics.cpp
 	src/Engine/PhysicsBody.h
