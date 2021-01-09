@@ -1,0 +1,72 @@
+\hypertarget{classmyengine_1_1_audio_source}{}\doxysection{myengine\+::Audio\+Source Class Reference}
+\label{classmyengine_1_1_audio_source}\index{myengine::AudioSource@{myengine::AudioSource}}
+
+
+{\ttfamily \#include $<$Audio\+Source.\+h$>$}
+
+Inheritance diagram for myengine\+::Audio\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmyengine_1_1_audio_source}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_audio_source_a24bfa387b58ba20ad1f603d59bd6c80a}{on\+Initialize}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_audio_source_a09ec6c38e048c5d6616a5875533ab230}{on\+Tick}} ()
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_a473027f9901e870d12263ef3ad4410e7}\label{classmyengine_1_1_audio_source_a473027f9901e870d12263ef3ad4410e7}} 
+void {\bfseries Set\+Clip} (std\+::string file\+Name)
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_ab1666da974dab02453f0ea18bcc500b7}\label{classmyengine_1_1_audio_source_ab1666da974dab02453f0ea18bcc500b7}} 
+void {\bfseries Play} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_ab8792ac74af5fa2c216b589d00d9abe2}\label{classmyengine_1_1_audio_source_ab8792ac74af5fa2c216b589d00d9abe2}} 
+bool {\bfseries loop} = false
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_ae5a1212c59915d9e2422019c14a30648}\label{classmyengine_1_1_audio_source_ae5a1212c59915d9e2422019c14a30648}} 
+float {\bfseries pitch} = 1
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_aa8158e3d0a0b01cab070b16c72dfefb5}\label{classmyengine_1_1_audio_source_aa8158e3d0a0b01cab070b16c72dfefb5}} 
+float {\bfseries gain} = 1
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_afbc5ce6c9d302275d5bb93d4e8beaf86}\label{classmyengine_1_1_audio_source_afbc5ce6c9d302275d5bb93d4e8beaf86}} 
+glm\+::vec3 {\bfseries velocity} = glm\+::vec3(0,0,0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Acts as an audio source. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_a24bfa387b58ba20ad1f603d59bd6c80a}\label{classmyengine_1_1_audio_source_a24bfa387b58ba20ad1f603d59bd6c80a}} 
+\index{myengine::AudioSource@{myengine::AudioSource}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!myengine::AudioSource@{myengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void myengine\+::\+Audio\+Source\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize function for overriding in inheriting classes. 
+
+Reimplemented from \mbox{\hyperlink{classmyengine_1_1_component_a10f0b3e4830b14595616f74975083108}{myengine\+::\+Component}}.
+
+\mbox{\Hypertarget{classmyengine_1_1_audio_source_a09ec6c38e048c5d6616a5875533ab230}\label{classmyengine_1_1_audio_source_a09ec6c38e048c5d6616a5875533ab230}} 
+\index{myengine::AudioSource@{myengine::AudioSource}!onTick@{onTick}}
+\index{onTick@{onTick}!myengine::AudioSource@{myengine::AudioSource}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void myengine\+::\+Audio\+Source\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tick function for overriding in inheriting classes. 
+
+Reimplemented from \mbox{\hyperlink{classmyengine_1_1_component_aabd0406bbbb7a66b123a54e92727d245}{myengine\+::\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Audio\+Source.\+h\item 
+Audio\+Source.\+cpp\end{DoxyCompactItemize}

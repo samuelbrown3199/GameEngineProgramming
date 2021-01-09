@@ -1,0 +1,66 @@
+\hypertarget{classmyengine_1_1_camera}{}\doxysection{myengine\+::Camera Class Reference}
+\label{classmyengine_1_1_camera}\index{myengine::Camera@{myengine::Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+Inheritance diagram for myengine\+::Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmyengine_1_1_camera}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_camera_a7692854db964314009f6a497a6e00445}{on\+Initialize}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_camera_ad94edd0e012a4572994414be08923945}{on\+Tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_camera_a483c149edf676a6433051a7da43770fc}\label{classmyengine_1_1_camera_a483c149edf676a6433051a7da43770fc}} 
+glm\+::vec3 {\bfseries up}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_camera_aca962c6d420c528fa0748ad7eb5a32b7}\label{classmyengine_1_1_camera_aca962c6d420c528fa0748ad7eb5a32b7}} 
+glm\+::vec3 {\bfseries forward} = glm\+::vec3(0.\+0f, 0.\+0f, -\/1.\+0f)
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_camera_af140ccaf510ad7de9b810b6de1a1fa6b}\label{classmyengine_1_1_camera_af140ccaf510ad7de9b810b6de1a1fa6b}} 
+int {\bfseries time} = 0
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_camera_ac30d12c6eea82f0675564fdb1086c993}\label{classmyengine_1_1_camera_ac30d12c6eea82f0675564fdb1086c993}} 
+glm\+::mat4 {\bfseries view}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmyengine_1_1_camera}{Camera}} component. Used in rendering. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_camera_a7692854db964314009f6a497a6e00445}\label{classmyengine_1_1_camera_a7692854db964314009f6a497a6e00445}} 
+\index{myengine::Camera@{myengine::Camera}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!myengine::Camera@{myengine::Camera}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void myengine\+::\+Camera\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize function for overriding in inheriting classes. 
+
+Reimplemented from \mbox{\hyperlink{classmyengine_1_1_component_a10f0b3e4830b14595616f74975083108}{myengine\+::\+Component}}.
+
+\mbox{\Hypertarget{classmyengine_1_1_camera_ad94edd0e012a4572994414be08923945}\label{classmyengine_1_1_camera_ad94edd0e012a4572994414be08923945}} 
+\index{myengine::Camera@{myengine::Camera}!onTick@{onTick}}
+\index{onTick@{onTick}!myengine::Camera@{myengine::Camera}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void myengine\+::\+Camera\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tick function for overriding in inheriting classes. 
+
+Reimplemented from \mbox{\hyperlink{classmyengine_1_1_component_aabd0406bbbb7a66b123a54e92727d245}{myengine\+::\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Camera.\+h\item 
+Camera.\+cpp\end{DoxyCompactItemize}

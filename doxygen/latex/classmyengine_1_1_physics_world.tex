@@ -1,0 +1,77 @@
+\hypertarget{classmyengine_1_1_physics_world}{}\doxysection{myengine\+::Physics\+World Class Reference}
+\label{classmyengine_1_1_physics_world}\index{myengine::PhysicsWorld@{myengine::PhysicsWorld}}
+
+
+{\ttfamily \#include $<$Physics\+World.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_physics_world_a82d3d8071d89dec09ce4f7ad525d30a0}{Cleanup\+Physics\+World}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_physics_world_a28d3622ada4e12c939981330d0f7b955}{Add\+Collider}} (bt\+Collision\+Shape $\ast$shape)
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_physics_world_a2bc0712ec4d1d45a1ba99c0d34dff57a}{Add\+Rigidbody}} (bt\+Rigid\+Body $\ast$body)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_physics_world}{Physics\+World}} $>$ \mbox{\hyperlink{classmyengine_1_1_physics_world_a050ba16e196d4f2ee8183f05d4b5dcc1}{Create\+Physics\+World}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_a5f9011a64ea5feb58a50456e23fb35da}\label{classmyengine_1_1_physics_world_a5f9011a64ea5feb58a50456e23fb35da}} 
+bt\+Default\+Collision\+Configuration $\ast$ {\bfseries collision\+Configuration}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_ad1807844fa12a4e16a7560022df32cb5}\label{classmyengine_1_1_physics_world_ad1807844fa12a4e16a7560022df32cb5}} 
+bt\+Collision\+Dispatcher $\ast$ {\bfseries dispatcher}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_acf222f3477275abbf8682b43e28641ae}\label{classmyengine_1_1_physics_world_acf222f3477275abbf8682b43e28641ae}} 
+bt\+Broadphase\+Interface $\ast$ {\bfseries overlapping\+Pair\+Cache}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_a34005162d96ef248cf8ae04486889c80}\label{classmyengine_1_1_physics_world_a34005162d96ef248cf8ae04486889c80}} 
+bt\+Sequential\+Impulse\+Constraint\+Solver $\ast$ {\bfseries solver}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_ab1d0e83eabb0595f477232789a2e2ad6}\label{classmyengine_1_1_physics_world_ab1d0e83eabb0595f477232789a2e2ad6}} 
+bt\+Discrete\+Dynamics\+World $\ast$ {\bfseries dynamic\+World}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_a5978ead418ab3579d8a4738b35bd9503}\label{classmyengine_1_1_physics_world_a5978ead418ab3579d8a4738b35bd9503}} 
+bt\+Aligned\+Object\+Array$<$ bt\+Collision\+Shape $\ast$ $>$ {\bfseries collision\+Shapes}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores various options regarding the bullet physics. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_physics_world_a28d3622ada4e12c939981330d0f7b955}\label{classmyengine_1_1_physics_world_a28d3622ada4e12c939981330d0f7b955}} 
+\index{myengine::PhysicsWorld@{myengine::PhysicsWorld}!AddCollider@{AddCollider}}
+\index{AddCollider@{AddCollider}!myengine::PhysicsWorld@{myengine::PhysicsWorld}}
+\doxysubsubsection{\texorpdfstring{AddCollider()}{AddCollider()}}
+{\footnotesize\ttfamily void myengine\+::\+Physics\+World\+::\+Add\+Collider (\begin{DoxyParamCaption}\item[{bt\+Collision\+Shape $\ast$}]{shape }\end{DoxyParamCaption})}
+
+Adds a collider to the list of all colliders. \mbox{\Hypertarget{classmyengine_1_1_physics_world_a2bc0712ec4d1d45a1ba99c0d34dff57a}\label{classmyengine_1_1_physics_world_a2bc0712ec4d1d45a1ba99c0d34dff57a}} 
+\index{myengine::PhysicsWorld@{myengine::PhysicsWorld}!AddRigidbody@{AddRigidbody}}
+\index{AddRigidbody@{AddRigidbody}!myengine::PhysicsWorld@{myengine::PhysicsWorld}}
+\doxysubsubsection{\texorpdfstring{AddRigidbody()}{AddRigidbody()}}
+{\footnotesize\ttfamily void myengine\+::\+Physics\+World\+::\+Add\+Rigidbody (\begin{DoxyParamCaption}\item[{bt\+Rigid\+Body $\ast$}]{body }\end{DoxyParamCaption})}
+
+Adds a rigidbody to the physics world. \mbox{\Hypertarget{classmyengine_1_1_physics_world_a82d3d8071d89dec09ce4f7ad525d30a0}\label{classmyengine_1_1_physics_world_a82d3d8071d89dec09ce4f7ad525d30a0}} 
+\index{myengine::PhysicsWorld@{myengine::PhysicsWorld}!CleanupPhysicsWorld@{CleanupPhysicsWorld}}
+\index{CleanupPhysicsWorld@{CleanupPhysicsWorld}!myengine::PhysicsWorld@{myengine::PhysicsWorld}}
+\doxysubsubsection{\texorpdfstring{CleanupPhysicsWorld()}{CleanupPhysicsWorld()}}
+{\footnotesize\ttfamily void myengine\+::\+Physics\+World\+::\+Cleanup\+Physics\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cleans up the physics world memory. \mbox{\Hypertarget{classmyengine_1_1_physics_world_a050ba16e196d4f2ee8183f05d4b5dcc1}\label{classmyengine_1_1_physics_world_a050ba16e196d4f2ee8183f05d4b5dcc1}} 
+\index{myengine::PhysicsWorld@{myengine::PhysicsWorld}!CreatePhysicsWorld@{CreatePhysicsWorld}}
+\index{CreatePhysicsWorld@{CreatePhysicsWorld}!myengine::PhysicsWorld@{myengine::PhysicsWorld}}
+\doxysubsubsection{\texorpdfstring{CreatePhysicsWorld()}{CreatePhysicsWorld()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_physics_world}{Physics\+World}} $>$ myengine\+::\+Physics\+World\+::\+Create\+Physics\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a physics world object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Physics\+World.\+h\item 
+Physics\+World.\+cpp\end{DoxyCompactItemize}

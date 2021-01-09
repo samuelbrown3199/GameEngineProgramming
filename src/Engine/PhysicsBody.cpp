@@ -13,10 +13,12 @@ namespace myengine
 		transform = GetEntity()->GetComponent<Transform>();
 		collider = GetEntity()->GetComponent<Collider>();
 
-		btTransform bodyTransform;
-		bodyTransform.setIdentity();
+		//bodyTransform.setIdentity();
 		bodyTransform.setOrigin(btVector3(transform->position.x, transform->position.y, transform->position.z));
 		bodyTransform.setRotation(btQuaternion(transform->rotation.x, transform->rotation.y, transform->rotation.z));
+
+		//std::cout << "Rotation: " << bodyTransform.getRotation().getX() << "		" << bodyTransform.getRotation().getY() << "		" << bodyTransform.getRotation().getZ() << std::endl;
+		//std::cout << "Euler: "<< x << "		" << y << "		" << z << std::endl;
 
 		mass = _mass;
 
@@ -28,19 +30,27 @@ namespace myengine
 		}
 		btDefaultMotionState* motionState = new btDefaultMotionState(bodyTransform);
 		btRigidBody::btRigidBodyConstructionInfo rbInfo(mass, motionState, collider->shape, localInertia);
+		rbInfo.m_linearDamping = .2f;
+		rbInfo.m_angularDamping = .2f;
+		rbInfo.m_restitution = 0.35;
+
 		rigidBody = new btRigidBody(rbInfo);
+		rigidBody->setFriction(.5f);
+		rigidBody->setRollingFriction(.5f);
 
 		GetApplication()->GetPhysicsWorld()->AddRigidbody(rigidBody);
 	}
 
 	void PhysicsBody::onTick()
 	{
-		btTransform trans;
 		if (rigidBody && rigidBody->getMotionState())
 		{
-			rigidBody->getMotionState()->getWorldTransform(trans);
-			transform->SetPosition(glm::vec3(trans.getOrigin().getX(), trans.getOrigin().getY(), trans.getOrigin().getZ()));
-			transform->SetRotation(glm::vec3(trans.getRotation().getX(), trans.getRotation().getY(), trans.getRotation().getZ()));
+			rigidBody->getMotionState()->getWorldTransform(bodyTransform);
+			transform->SetPosition(glm::vec3(bodyTransform.getOrigin().getX(), bodyTransform.getOrigin().getY(), bodyTransform.getOrigin().getZ()));
+
+			transform->SetRotation(glm::vec3(bodyTransform.getRotation().getX(), bodyTransform.getRotation().getY(), bodyTransform.getRotation().getZ()));
+
+			//std::cout << bodyTransform.getRotation().getX() << "	" << bodyTransform.getRotation().getY() << "	" << bodyTransform.getRotation().getZ() << std::endl;
 		}
 	}
 }

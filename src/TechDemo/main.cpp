@@ -19,34 +19,41 @@ int main()
 
 	srand(time(NULL));
 
-	for (int x = 0; x < 10; x++)
+	const int amount = 10;
+
+	for (int x = 0; x < amount; x++)
 	{
-		for (int z = 0; z < 10; z++)
+		for (int z = 0; z < amount; z++)
 		{
-			for (int y = 0; y < 10; y++)
+			for (int y = 0; y < amount; y++)
 			{
 				std::shared_ptr<Entity> physicsTest = app->AddEntity();
-				physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(25 + (-5 * x), 50 + (10*y), -30 + (-5 * z)));
+				physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(25 + (-5 * x)+rand() % 5, 50 + (10*y), -30 + (-5 * z) + rand() % 5));
 				physicsTest->GetComponent<Transform>()->SetRotation(glm::vec3(rand()%360, rand() % 360, rand() % 360));
 				std::shared_ptr<MeshRenderer> pc = physicsTest->AddComponent<MeshRenderer>();
 				pc->SetModel("sphere.obj");
 				pc->SetShader(app->standardShader);
 				pc->SetTexture(texture);
 				physicsTest->AddComponent<Collider>(Collider::ColliderShape::sphere);
-				physicsTest->AddComponent<PhysicsBody>(1);
+				physicsTest->AddComponent<PhysicsBody>(5);
 			}
 		}
 	}
 
 	std::shared_ptr<Entity> floor = app->AddEntity();
 	floor->GetComponent<Transform>()->SetPosition(glm::vec3(0, 0, 0));
-	floor->GetComponent<Transform>()->SetScale(glm::vec3(1000, 1, 1000));
+	floor->GetComponent<Transform>()->SetScale(glm::vec3(100, 1, 100));
 	std::shared_ptr<MeshRenderer> fc = floor->AddComponent<MeshRenderer>();
 	fc->SetModel("cube.obj");
 	fc->SetShader(app->standardShader);
 	fc->SetTexture(texture);
 	floor->AddComponent<Collider>(Collider::ColliderShape::box);
-	floor->AddComponent<PhysicsBody>(0);
+	floor->AddComponent<PhysicsBody>(0.0f);
+	std::shared_ptr<AudioSource> au = floor->AddComponent<AudioSource>();
+	au->SetClip("test2.ogg");
+	au->loop = true;
+	au->gain = 1.0f;
+	au->Play();
 
 	std::shared_ptr<Entity> player = app->AddEntity();
 	player->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, 0));
@@ -55,7 +62,6 @@ int main()
 	player->AddComponent<AudioListener>();
 
 	app->AddCamera(cam);
-
 
 	std::shared_ptr<Entity> testCube = app->AddEntity();
 	testCube->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, 0));

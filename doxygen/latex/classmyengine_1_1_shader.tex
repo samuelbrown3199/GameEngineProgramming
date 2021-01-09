@@ -1,0 +1,54 @@
+\hypertarget{classmyengine_1_1_shader}{}\doxysection{myengine\+::Shader Class Reference}
+\label{classmyengine_1_1_shader}\index{myengine::Shader@{myengine::Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_shader_a8cba01c7d73fa760787b7e33ca0000bc}\label{classmyengine_1_1_shader_a8cba01c7d73fa760787b7e33ca0000bc}} 
+{\bfseries Shader} (std\+::string vertex\+Path, std\+::string fragment\+Path)
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_shader_aed7d8b981a17c32a5f7084371060e247}{Setup\+Shader}} (const G\+Lchar $\ast$vertex\+Source, const G\+Lchar $\ast$fragment\+Source)
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_shader_a08706ac2b4375d3bb7a6b38db0369f44}{Use\+Shader}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_shader_a8e070051de8f3dd3bd09f3014ce69b54}{Bind\+Matrix}} (std\+::string location, glm\+::mat4 matrix)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_shader_a164430d426c86b3072a26859bd7c4340}\label{classmyengine_1_1_shader_a164430d426c86b3072a26859bd7c4340}} 
+G\+Luint {\bfseries program\+ID}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores glsl shader information as an opengl shader program. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_shader_a8e070051de8f3dd3bd09f3014ce69b54}\label{classmyengine_1_1_shader_a8e070051de8f3dd3bd09f3014ce69b54}} 
+\index{myengine::Shader@{myengine::Shader}!BindMatrix@{BindMatrix}}
+\index{BindMatrix@{BindMatrix}!myengine::Shader@{myengine::Shader}}
+\doxysubsubsection{\texorpdfstring{BindMatrix()}{BindMatrix()}}
+{\footnotesize\ttfamily void Shader\+::\+Bind\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string}]{location,  }\item[{glm\+::mat4}]{matrix }\end{DoxyParamCaption})}
+
+Binds a matrix 4x4 to the shader program to the parameter location. \mbox{\Hypertarget{classmyengine_1_1_shader_aed7d8b981a17c32a5f7084371060e247}\label{classmyengine_1_1_shader_aed7d8b981a17c32a5f7084371060e247}} 
+\index{myengine::Shader@{myengine::Shader}!SetupShader@{SetupShader}}
+\index{SetupShader@{SetupShader}!myengine::Shader@{myengine::Shader}}
+\doxysubsubsection{\texorpdfstring{SetupShader()}{SetupShader()}}
+{\footnotesize\ttfamily void Shader\+::\+Setup\+Shader (\begin{DoxyParamCaption}\item[{const G\+Lchar $\ast$}]{vertex\+Source,  }\item[{const G\+Lchar $\ast$}]{fragment\+Source }\end{DoxyParamCaption})}
+
+Takes the shader files and compiles it into a usable shader program. \mbox{\Hypertarget{classmyengine_1_1_shader_a08706ac2b4375d3bb7a6b38db0369f44}\label{classmyengine_1_1_shader_a08706ac2b4375d3bb7a6b38db0369f44}} 
+\index{myengine::Shader@{myengine::Shader}!UseShader@{UseShader}}
+\index{UseShader@{UseShader}!myengine::Shader@{myengine::Shader}}
+\doxysubsubsection{\texorpdfstring{UseShader()}{UseShader()}}
+{\footnotesize\ttfamily void Shader\+::\+Use\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets the state of opengl to use this shader program. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Shader.\+h\item 
+Shader.\+cpp\end{DoxyCompactItemize}

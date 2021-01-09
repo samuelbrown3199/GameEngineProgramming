@@ -1,0 +1,72 @@
+\hypertarget{classmyengine_1_1_physics_body}{}\doxysection{myengine\+::Physics\+Body Class Reference}
+\label{classmyengine_1_1_physics_body}\index{myengine::PhysicsBody@{myengine::PhysicsBody}}
+
+
+{\ttfamily \#include $<$Physics\+Body.\+h$>$}
+
+Inheritance diagram for myengine\+::Physics\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmyengine_1_1_physics_body}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_body_aea6f1879362a021d5370455b46f309d0}\label{classmyengine_1_1_physics_body_aea6f1879362a021d5370455b46f309d0}} 
+void {\bfseries on\+Initialize} (float \+\_\+mass)
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_physics_body_a094d3b5a73bc94d0141823104b27e343}{on\+Tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bt\+Transform \mbox{\hyperlink{classmyengine_1_1_physics_body_a0ae27ae8cd3b50fc72b61732bb723572}{body\+Transform}}
+\item 
+bt\+Scalar \mbox{\hyperlink{classmyengine_1_1_physics_body_a44c0f91c52d46d40266151f07edd4804}{mass}}
+\item 
+bt\+Rigid\+Body $\ast$ \mbox{\hyperlink{classmyengine_1_1_physics_body_abe93a400a6ba32ef6fff3e9f960637b2}{rigid\+Body}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible to creating and adding a rigidbody to the bullet physics world simulation. The entity must have a collider added before adding the physics body component. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_physics_body_a094d3b5a73bc94d0141823104b27e343}\label{classmyengine_1_1_physics_body_a094d3b5a73bc94d0141823104b27e343}} 
+\index{myengine::PhysicsBody@{myengine::PhysicsBody}!onTick@{onTick}}
+\index{onTick@{onTick}!myengine::PhysicsBody@{myengine::PhysicsBody}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void myengine\+::\+Physics\+Body\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Tick function for overriding in inheriting classes. 
+
+Reimplemented from \mbox{\hyperlink{classmyengine_1_1_component_aabd0406bbbb7a66b123a54e92727d245}{myengine\+::\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_physics_body_a0ae27ae8cd3b50fc72b61732bb723572}\label{classmyengine_1_1_physics_body_a0ae27ae8cd3b50fc72b61732bb723572}} 
+\index{myengine::PhysicsBody@{myengine::PhysicsBody}!bodyTransform@{bodyTransform}}
+\index{bodyTransform@{bodyTransform}!myengine::PhysicsBody@{myengine::PhysicsBody}}
+\doxysubsubsection{\texorpdfstring{bodyTransform}{bodyTransform}}
+{\footnotesize\ttfamily bt\+Transform myengine\+::\+Physics\+Body\+::body\+Transform}
+
+Stores the rigidbody transform within the physics simulation. \mbox{\Hypertarget{classmyengine_1_1_physics_body_a44c0f91c52d46d40266151f07edd4804}\label{classmyengine_1_1_physics_body_a44c0f91c52d46d40266151f07edd4804}} 
+\index{myengine::PhysicsBody@{myengine::PhysicsBody}!mass@{mass}}
+\index{mass@{mass}!myengine::PhysicsBody@{myengine::PhysicsBody}}
+\doxysubsubsection{\texorpdfstring{mass}{mass}}
+{\footnotesize\ttfamily bt\+Scalar myengine\+::\+Physics\+Body\+::mass}
+
+Stores the rigidbody mass. \mbox{\Hypertarget{classmyengine_1_1_physics_body_abe93a400a6ba32ef6fff3e9f960637b2}\label{classmyengine_1_1_physics_body_abe93a400a6ba32ef6fff3e9f960637b2}} 
+\index{myengine::PhysicsBody@{myengine::PhysicsBody}!rigidBody@{rigidBody}}
+\index{rigidBody@{rigidBody}!myengine::PhysicsBody@{myengine::PhysicsBody}}
+\doxysubsubsection{\texorpdfstring{rigidBody}{rigidBody}}
+{\footnotesize\ttfamily bt\+Rigid\+Body$\ast$ myengine\+::\+Physics\+Body\+::rigid\+Body}
+
+Stores a pointer to the rigidbody. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Physics\+Body.\+h\item 
+Physics\+Body.\+cpp\end{DoxyCompactItemize}

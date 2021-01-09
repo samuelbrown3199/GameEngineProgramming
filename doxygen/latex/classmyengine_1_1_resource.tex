@@ -1,0 +1,53 @@
+\hypertarget{classmyengine_1_1_resource}{}\doxysection{myengine\+::Resource Class Reference}
+\label{classmyengine_1_1_resource}\index{myengine::Resource@{myengine::Resource}}
+
+
+{\ttfamily \#include $<$Resource.\+h$>$}
+
+Inheritance diagram for myengine\+::Resource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmyengine_1_1_resource}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmyengine_1_1_resource_aee10aed89276f04af739e5b6b920f356}{On\+Load}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classmyengine_1_1_resource_a065d7396f00d6b87909d18777748b695}{resource\+Path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resources inherit from this class, e.\+g Textures \& Models. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_resource_aee10aed89276f04af739e5b6b920f356}\label{classmyengine_1_1_resource_aee10aed89276f04af739e5b6b920f356}} 
+\index{myengine::Resource@{myengine::Resource}!OnLoad@{OnLoad}}
+\index{OnLoad@{OnLoad}!myengine::Resource@{myengine::Resource}}
+\doxysubsubsection{\texorpdfstring{OnLoad()}{OnLoad()}}
+{\footnotesize\ttfamily void Resource\+::\+On\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+When a resource is loaded this function is called to manage the data from the file. 
+
+Reimplemented in \mbox{\hyperlink{classmyengine_1_1_texture_af07f5c946612e50df084b0c295e89803}{myengine\+::\+Texture}}, \mbox{\hyperlink{classmyengine_1_1_model_a90a6d0f39f33b0dfb82d2a1a647b031a}{myengine\+::\+Model}}, and \mbox{\hyperlink{classmyengine_1_1_audio_clip_a63852c467885dedab86d402eaf156b1e}{myengine\+::\+Audio\+Clip}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_resource_a065d7396f00d6b87909d18777748b695}\label{classmyengine_1_1_resource_a065d7396f00d6b87909d18777748b695}} 
+\index{myengine::Resource@{myengine::Resource}!resourcePath@{resourcePath}}
+\index{resourcePath@{resourcePath}!myengine::Resource@{myengine::Resource}}
+\doxysubsubsection{\texorpdfstring{resourcePath}{resourcePath}}
+{\footnotesize\ttfamily std\+::string myengine\+::\+Resource\+::resource\+Path}
+
+Stores the file path of the resource, used as an identifier. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Resource.\+h\item 
+Resource.\+cpp\end{DoxyCompactItemize}

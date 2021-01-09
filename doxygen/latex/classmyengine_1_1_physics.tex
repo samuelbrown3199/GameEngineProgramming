@@ -1,0 +1,201 @@
+\hypertarget{classmyengine_1_1_physics}{}\doxysection{myengine\+::Physics Class Reference}
+\label{classmyengine_1_1_physics}\index{myengine::Physics@{myengine::Physics}}
+
+
+{\ttfamily \#include $<$Physics.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static glm\+::vec3 \mbox{\hyperlink{classmyengine_1_1_physics_aac283d893efb1bcfcd308eea0d8822a7}{Calculate3\+D\+Vector}} (const glm\+::vec3 \&i\+\_\+point1, const glm\+::vec3 \&i\+\_\+point2)
+\item 
+static float \mbox{\hyperlink{classmyengine_1_1_physics_abea430a6c5522139ac49631934275d90}{Compute\+Distance\+Between3\+D\+Points}} (const glm\+::vec3 \&i\+\_\+\+Point1, const glm\+::vec3 \&i\+\_\+\+Point2)
+\item 
+static glm\+::vec3 \mbox{\hyperlink{classmyengine_1_1_physics_a5781d8feb0b18e45fe69dfc02f5e4c71}{Compute\+Normal\+To\+Triangle\+Defined\+By3\+D\+Points}} (glm\+::vec3 const \&i\+\_\+\+Point1, glm\+::vec3 const \&i\+\_\+\+Point2, glm\+::vec3 const \&i\+\_\+\+Point3)
+\item 
+static glm\+::vec3 \mbox{\hyperlink{classmyengine_1_1_physics_ade62ae12e3be62d5624fc33adee709ec}{Compute\+Normal\+To3\+D\+Vectors}} (glm\+::vec3 const \&i\+\_\+\+Vector1, glm\+::vec3 const \&i\+\_\+\+Vector2)
+\item 
+static float \mbox{\hyperlink{classmyengine_1_1_physics_ada94b84c29b07f39be26d8e9d15fe2e3}{Compute\+Volume\+Of\+Parallelepiped}} (glm\+::vec3 const \&i\+\_\+\+VectorA, glm\+::vec3 const \&i\+\_\+\+VectorB, glm\+::vec3 const \&i\+\_\+\+VectorC)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a69f847233d9e0dfa148b87771e9532c9}{Velocity}} (const double \&i\+\_\+\+Point\+One, const double \&i\+\_\+\+Point\+Zero, const double \&i\+\_\+\+Time)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a0e770d4c727cbc6428e6fb3aa8bede51}{Acceleration}} (const double \&i\+\_\+\+Velocity\+One, const double \&i\+\_\+\+Velocity\+Zero, const double \&i\+\_\+\+Time)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a158a3f3e01ce037101f0f2ef559dec0d}{Compute\+Displacment\+Using\+Acceleration}} (const double \&i\+\_\+\+Initial\+Velocity, const double \&i\+\_\+\+Acceleration, const double i\+\_\+\+Time)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_aafebe554953dbf6e72f39e61aced92d0}{Compute\+Final\+Velocity}} (const double \&i\+\_\+\+Initial\+Velocity, const double \&i\+\_\+\+Acceleration, const double \&i\+\_\+\+Time)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a3189ca1fc692e7cd916343caa7c7c516}{Compute\+Final\+Velocity\+Squared}} (const double \&i\+\_\+\+Initial\+Velocity\+Squared, const double \&i\+\_\+\+Acceleration, const double \&i\+\_\+\+Displacement)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a91b3c3f6c7eb3025e8ee4cdf4d57d59b}{Compute\+Displacement\+Using\+Velocities}} (const double \&i\+\_\+\+Initial\+Velocity, const double \&i\+\_\+\+Final\+Velocity, const double \&i\+\_\+\+Timedouble)
+\item 
+static float \mbox{\hyperlink{classmyengine_1_1_physics_ac9b2388de754ec6a33b4d533dfaf1f35}{Lerp}} (const float \&i\+\_\+\+PointA, const float \&i\+\_\+\+PointB, const float \&i\+\_\+\+DeltaT)
+\item 
+static glm\+::vec3 \mbox{\hyperlink{classmyengine_1_1_physics_a82ff6e7e87673eab1ed8e411648a0d62}{Lerp}} (const glm\+::vec3 \&i\+\_\+\+PointA, const glm\+::vec3 \&i\+\_\+\+PointB, const float \&i\+\_\+\+DeltaT)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_ab19c844409c66f1db34770b245b903fe}{Compute\+Force\+Due\+To\+Gravity}} (const double \&i\+\_\+\+Mass\+One, const double \&i\+\_\+\+Mass\+Two, const double i\+\_\+\+Radius\+One, const double \&i\+\_\+\+Radius\+Two)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a4ae96c793daf668cece1be14a06e5394}{Compute\+Centripetal\+Acceleration}} (const double \&i\+\_\+\+Velocity, const double \&i\+\_\+\+Radius)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a506dd49111d22becb8bbb638dd6ea322}{Compute\+Gravitational\+PE}} (const double \&i\+\_\+\+H0, const double \&i\+\_\+\+Mass)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a9a4263712367a83cc1f559599292d3a8}{Compute\+Kinetic\+Energy}} (const double \&i\+\_\+\+Velocity, const double \&i\+\_\+\+Mass)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a4a098fc5257ffd5a1e42c42ce1e94d3c}{Compute\+Force}} (const double \&i\+\_\+\+Mass, const double \&i\+\_\+\+Aceleration)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_aff388ce45772fd7d672edf9257aaffd9}{Free\+Fall\+Velocity\+Due\+To\+Gravity}} ()
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_ab6ac24f5c77787fd169785ba77b1e430}{Free\+Fall\+Velocity\+With\+Drag}} (const double \&i\+\_\+mass, const double \&i\+\_\+\+Air\+Density, const double \&i\+\_\+\+Drag\+Coefficient, const double \&i\+\_\+\+Area)
+\item 
+static double \mbox{\hyperlink{classmyengine_1_1_physics_a8ea5a9c797bb9ad45e546adec2995b3b}{Compute\+Terminal\+Velocity}} (const double \&i\+\_\+mass, const double \&i\+\_\+\+Air\+Density, const double \&i\+\_\+\+Drag\+Coefficient, const double \&i\+\_\+\+Area)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_a70f3bd92bf94fcc42e401d93581e3452}\label{classmyengine_1_1_physics_a70f3bd92bf94fcc42e401d93581e3452}} 
+static const double {\bfseries G} = 0.\+0000000000667
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_a2ede8280c5c433d83e268499ebd66317}\label{classmyengine_1_1_physics_a2ede8280c5c433d83e268499ebd66317}} 
+static const double {\bfseries g} = 9.\+80
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_physics_a1f1ef388a176b32fb7fe4642feb72284}\label{classmyengine_1_1_physics_a1f1ef388a176b32fb7fe4642feb72284}} 
+static float {\bfseries deltaT} = 0.\+1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains mathematics to use in physics. Un-\/used since using bullet 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_physics_a0e770d4c727cbc6428e6fb3aa8bede51}\label{classmyengine_1_1_physics_a0e770d4c727cbc6428e6fb3aa8bede51}} 
+\index{myengine::Physics@{myengine::Physics}!Acceleration@{Acceleration}}
+\index{Acceleration@{Acceleration}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{Acceleration()}{Acceleration()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Acceleration (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Velocity\+One,  }\item[{const double \&}]{i\+\_\+\+Velocity\+Zero,  }\item[{const double \&}]{i\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the change acceleration of an object using two velocities and a time. \mbox{\Hypertarget{classmyengine_1_1_physics_aac283d893efb1bcfcd308eea0d8822a7}\label{classmyengine_1_1_physics_aac283d893efb1bcfcd308eea0d8822a7}} 
+\index{myengine::Physics@{myengine::Physics}!Calculate3DVector@{Calculate3DVector}}
+\index{Calculate3DVector@{Calculate3DVector}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{Calculate3DVector()}{Calculate3DVector()}}
+{\footnotesize\ttfamily glm\+::vec3 myengine\+::\+Physics\+::\+Calculate3\+D\+Vector (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{i\+\_\+point1,  }\item[{const glm\+::vec3 \&}]{i\+\_\+point2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the differnce between two vectors. \mbox{\Hypertarget{classmyengine_1_1_physics_a4ae96c793daf668cece1be14a06e5394}\label{classmyengine_1_1_physics_a4ae96c793daf668cece1be14a06e5394}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeCentripetalAcceleration@{ComputeCentripetalAcceleration}}
+\index{ComputeCentripetalAcceleration@{ComputeCentripetalAcceleration}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeCentripetalAcceleration()}{ComputeCentripetalAcceleration()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Centripetal\+Acceleration (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Velocity,  }\item[{const double \&}]{i\+\_\+\+Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes centripetal acceleration. \mbox{\Hypertarget{classmyengine_1_1_physics_a91b3c3f6c7eb3025e8ee4cdf4d57d59b}\label{classmyengine_1_1_physics_a91b3c3f6c7eb3025e8ee4cdf4d57d59b}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeDisplacementUsingVelocities@{ComputeDisplacementUsingVelocities}}
+\index{ComputeDisplacementUsingVelocities@{ComputeDisplacementUsingVelocities}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeDisplacementUsingVelocities()}{ComputeDisplacementUsingVelocities()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Displacement\+Using\+Velocities (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Initial\+Velocity,  }\item[{const double \&}]{i\+\_\+\+Final\+Velocity,  }\item[{const double \&}]{i\+\_\+\+Timedouble }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the displacement using initial velocity, final velocity and the time. \mbox{\Hypertarget{classmyengine_1_1_physics_a158a3f3e01ce037101f0f2ef559dec0d}\label{classmyengine_1_1_physics_a158a3f3e01ce037101f0f2ef559dec0d}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeDisplacmentUsingAcceleration@{ComputeDisplacmentUsingAcceleration}}
+\index{ComputeDisplacmentUsingAcceleration@{ComputeDisplacmentUsingAcceleration}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeDisplacmentUsingAcceleration()}{ComputeDisplacmentUsingAcceleration()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Displacment\+Using\+Acceleration (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Initial\+Velocity,  }\item[{const double \&}]{i\+\_\+\+Acceleration,  }\item[{const double}]{i\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes displacement using the current velocity, the acceleration and the time. \mbox{\Hypertarget{classmyengine_1_1_physics_abea430a6c5522139ac49631934275d90}\label{classmyengine_1_1_physics_abea430a6c5522139ac49631934275d90}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeDistanceBetween3DPoints@{ComputeDistanceBetween3DPoints}}
+\index{ComputeDistanceBetween3DPoints@{ComputeDistanceBetween3DPoints}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeDistanceBetween3DPoints()}{ComputeDistanceBetween3DPoints()}}
+{\footnotesize\ttfamily float myengine\+::\+Physics\+::\+Compute\+Distance\+Between3\+D\+Points (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{i\+\_\+\+Point1,  }\item[{const glm\+::vec3 \&}]{i\+\_\+\+Point2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the distance between two 3D points. \mbox{\Hypertarget{classmyengine_1_1_physics_aafebe554953dbf6e72f39e61aced92d0}\label{classmyengine_1_1_physics_aafebe554953dbf6e72f39e61aced92d0}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeFinalVelocity@{ComputeFinalVelocity}}
+\index{ComputeFinalVelocity@{ComputeFinalVelocity}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeFinalVelocity()}{ComputeFinalVelocity()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Final\+Velocity (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Initial\+Velocity,  }\item[{const double \&}]{i\+\_\+\+Acceleration,  }\item[{const double \&}]{i\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the final velocty of an object using initial velocity, acceleration and the time. \mbox{\Hypertarget{classmyengine_1_1_physics_a3189ca1fc692e7cd916343caa7c7c516}\label{classmyengine_1_1_physics_a3189ca1fc692e7cd916343caa7c7c516}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeFinalVelocitySquared@{ComputeFinalVelocitySquared}}
+\index{ComputeFinalVelocitySquared@{ComputeFinalVelocitySquared}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeFinalVelocitySquared()}{ComputeFinalVelocitySquared()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Final\+Velocity\+Squared (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Initial\+Velocity\+Squared,  }\item[{const double \&}]{i\+\_\+\+Acceleration,  }\item[{const double \&}]{i\+\_\+\+Displacement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the final velocity squared. \mbox{\Hypertarget{classmyengine_1_1_physics_a4a098fc5257ffd5a1e42c42ce1e94d3c}\label{classmyengine_1_1_physics_a4a098fc5257ffd5a1e42c42ce1e94d3c}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeForce@{ComputeForce}}
+\index{ComputeForce@{ComputeForce}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeForce()}{ComputeForce()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Force (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Mass,  }\item[{const double \&}]{i\+\_\+\+Aceleration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the force of an object. \mbox{\Hypertarget{classmyengine_1_1_physics_ab19c844409c66f1db34770b245b903fe}\label{classmyengine_1_1_physics_ab19c844409c66f1db34770b245b903fe}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeForceDueToGravity@{ComputeForceDueToGravity}}
+\index{ComputeForceDueToGravity@{ComputeForceDueToGravity}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeForceDueToGravity()}{ComputeForceDueToGravity()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Force\+Due\+To\+Gravity (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Mass\+One,  }\item[{const double \&}]{i\+\_\+\+Mass\+Two,  }\item[{const double}]{i\+\_\+\+Radius\+One,  }\item[{const double \&}]{i\+\_\+\+Radius\+Two }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the force due to gravity. \mbox{\Hypertarget{classmyengine_1_1_physics_a506dd49111d22becb8bbb638dd6ea322}\label{classmyengine_1_1_physics_a506dd49111d22becb8bbb638dd6ea322}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeGravitationalPE@{ComputeGravitationalPE}}
+\index{ComputeGravitationalPE@{ComputeGravitationalPE}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeGravitationalPE()}{ComputeGravitationalPE()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Gravitational\+PE (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+H0,  }\item[{const double \&}]{i\+\_\+\+Mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the gravitational potential energy. \mbox{\Hypertarget{classmyengine_1_1_physics_a9a4263712367a83cc1f559599292d3a8}\label{classmyengine_1_1_physics_a9a4263712367a83cc1f559599292d3a8}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeKineticEnergy@{ComputeKineticEnergy}}
+\index{ComputeKineticEnergy@{ComputeKineticEnergy}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeKineticEnergy()}{ComputeKineticEnergy()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Kinetic\+Energy (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Velocity,  }\item[{const double \&}]{i\+\_\+\+Mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the kinetic energy. \mbox{\Hypertarget{classmyengine_1_1_physics_ade62ae12e3be62d5624fc33adee709ec}\label{classmyengine_1_1_physics_ade62ae12e3be62d5624fc33adee709ec}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeNormalTo3DVectors@{ComputeNormalTo3DVectors}}
+\index{ComputeNormalTo3DVectors@{ComputeNormalTo3DVectors}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeNormalTo3DVectors()}{ComputeNormalTo3DVectors()}}
+{\footnotesize\ttfamily glm\+::vec3 myengine\+::\+Physics\+::\+Compute\+Normal\+To3\+D\+Vectors (\begin{DoxyParamCaption}\item[{glm\+::vec3 const \&}]{i\+\_\+\+Vector1,  }\item[{glm\+::vec3 const \&}]{i\+\_\+\+Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates a normal from two 3D vectors. \mbox{\Hypertarget{classmyengine_1_1_physics_a5781d8feb0b18e45fe69dfc02f5e4c71}\label{classmyengine_1_1_physics_a5781d8feb0b18e45fe69dfc02f5e4c71}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeNormalToTriangleDefinedBy3DPoints@{ComputeNormalToTriangleDefinedBy3DPoints}}
+\index{ComputeNormalToTriangleDefinedBy3DPoints@{ComputeNormalToTriangleDefinedBy3DPoints}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeNormalToTriangleDefinedBy3DPoints()}{ComputeNormalToTriangleDefinedBy3DPoints()}}
+{\footnotesize\ttfamily glm\+::vec3 myengine\+::\+Physics\+::\+Compute\+Normal\+To\+Triangle\+Defined\+By3\+D\+Points (\begin{DoxyParamCaption}\item[{glm\+::vec3 const \&}]{i\+\_\+\+Point1,  }\item[{glm\+::vec3 const \&}]{i\+\_\+\+Point2,  }\item[{glm\+::vec3 const \&}]{i\+\_\+\+Point3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates a normal direction of a triangle defined by three 3D vectors. \mbox{\Hypertarget{classmyengine_1_1_physics_a8ea5a9c797bb9ad45e546adec2995b3b}\label{classmyengine_1_1_physics_a8ea5a9c797bb9ad45e546adec2995b3b}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeTerminalVelocity@{ComputeTerminalVelocity}}
+\index{ComputeTerminalVelocity@{ComputeTerminalVelocity}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeTerminalVelocity()}{ComputeTerminalVelocity()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Compute\+Terminal\+Velocity (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+mass,  }\item[{const double \&}]{i\+\_\+\+Air\+Density,  }\item[{const double \&}]{i\+\_\+\+Drag\+Coefficient,  }\item[{const double \&}]{i\+\_\+\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the terminal velocity of an object. \mbox{\Hypertarget{classmyengine_1_1_physics_ada94b84c29b07f39be26d8e9d15fe2e3}\label{classmyengine_1_1_physics_ada94b84c29b07f39be26d8e9d15fe2e3}} 
+\index{myengine::Physics@{myengine::Physics}!ComputeVolumeOfParallelepiped@{ComputeVolumeOfParallelepiped}}
+\index{ComputeVolumeOfParallelepiped@{ComputeVolumeOfParallelepiped}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{ComputeVolumeOfParallelepiped()}{ComputeVolumeOfParallelepiped()}}
+{\footnotesize\ttfamily float myengine\+::\+Physics\+::\+Compute\+Volume\+Of\+Parallelepiped (\begin{DoxyParamCaption}\item[{glm\+::vec3 const \&}]{i\+\_\+\+VectorA,  }\item[{glm\+::vec3 const \&}]{i\+\_\+\+VectorB,  }\item[{glm\+::vec3 const \&}]{i\+\_\+\+VectorC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the volume of a parellelepiped. \mbox{\Hypertarget{classmyengine_1_1_physics_aff388ce45772fd7d672edf9257aaffd9}\label{classmyengine_1_1_physics_aff388ce45772fd7d672edf9257aaffd9}} 
+\index{myengine::Physics@{myengine::Physics}!FreeFallVelocityDueToGravity@{FreeFallVelocityDueToGravity}}
+\index{FreeFallVelocityDueToGravity@{FreeFallVelocityDueToGravity}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{FreeFallVelocityDueToGravity()}{FreeFallVelocityDueToGravity()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Free\+Fall\+Velocity\+Due\+To\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the freefall velocity due to gravity without drag. \mbox{\Hypertarget{classmyengine_1_1_physics_ab6ac24f5c77787fd169785ba77b1e430}\label{classmyengine_1_1_physics_ab6ac24f5c77787fd169785ba77b1e430}} 
+\index{myengine::Physics@{myengine::Physics}!FreeFallVelocityWithDrag@{FreeFallVelocityWithDrag}}
+\index{FreeFallVelocityWithDrag@{FreeFallVelocityWithDrag}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{FreeFallVelocityWithDrag()}{FreeFallVelocityWithDrag()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Free\+Fall\+Velocity\+With\+Drag (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+mass,  }\item[{const double \&}]{i\+\_\+\+Air\+Density,  }\item[{const double \&}]{i\+\_\+\+Drag\+Coefficient,  }\item[{const double \&}]{i\+\_\+\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Computes the freefall velocity due to gravity with drag. \mbox{\Hypertarget{classmyengine_1_1_physics_ac9b2388de754ec6a33b4d533dfaf1f35}\label{classmyengine_1_1_physics_ac9b2388de754ec6a33b4d533dfaf1f35}} 
+\index{myengine::Physics@{myengine::Physics}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float myengine\+::\+Physics\+::\+Lerp (\begin{DoxyParamCaption}\item[{const float \&}]{i\+\_\+\+PointA,  }\item[{const float \&}]{i\+\_\+\+PointB,  }\item[{const float \&}]{i\+\_\+\+DeltaT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Smoothly lerps the float value between one value to another. \mbox{\Hypertarget{classmyengine_1_1_physics_a82ff6e7e87673eab1ed8e411648a0d62}\label{classmyengine_1_1_physics_a82ff6e7e87673eab1ed8e411648a0d62}} 
+\index{myengine::Physics@{myengine::Physics}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily glm\+::vec3 myengine\+::\+Physics\+::\+Lerp (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{i\+\_\+\+PointA,  }\item[{const glm\+::vec3 \&}]{i\+\_\+\+PointB,  }\item[{const float \&}]{i\+\_\+\+DeltaT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Smoothly lerps the vector 3 value between one value to another. \mbox{\Hypertarget{classmyengine_1_1_physics_a69f847233d9e0dfa148b87771e9532c9}\label{classmyengine_1_1_physics_a69f847233d9e0dfa148b87771e9532c9}} 
+\index{myengine::Physics@{myengine::Physics}!Velocity@{Velocity}}
+\index{Velocity@{Velocity}!myengine::Physics@{myengine::Physics}}
+\doxysubsubsection{\texorpdfstring{Velocity()}{Velocity()}}
+{\footnotesize\ttfamily double myengine\+::\+Physics\+::\+Velocity (\begin{DoxyParamCaption}\item[{const double \&}]{i\+\_\+\+Point\+One,  }\item[{const double \&}]{i\+\_\+\+Point\+Zero,  }\item[{const double \&}]{i\+\_\+\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates velocity of an object going between two points in a given time. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Physics.\+h\item 
+Physics.\+cpp\end{DoxyCompactItemize}

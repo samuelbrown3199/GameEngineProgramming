@@ -115,7 +115,7 @@ namespace myengine
 			double frameTime = SDL_GetTicks() - frameStart;
 			double fps = 1000.0f / frameTime;
 			Physics::deltaT = 1.0f / fps;
-			physicsWorld->dynamicWorld->stepSimulation(frameTime);
+			physicsWorld->dynamicWorld->stepSimulation(Physics::deltaT);
 		}
 
 		physicsWorld->CleanupPhysicsWorld();

@@ -23,6 +23,7 @@ namespace myengine
         int sampleRate = 0;
         short* output = NULL;
         int samples = stb_vorbis_decode_filename(fileDirectory.c_str(), &channels, &sampleRate, &output);
+        int amountOfBytesPerSample = 0;
         if (samples == -1)
         {
             std::cout << "Failed to open file " << fileDirectory << std::endl;
@@ -32,14 +33,16 @@ namespace myengine
         if (channels == 1)
         {
             format = AL_FORMAT_MONO16;
+            amountOfBytesPerSample = 2;
         }
         else
         {
             format = AL_FORMAT_STEREO16;
+            amountOfBytesPerSample = 4;
         }
         // Record the sample rate required by OpenAL
         freq = sampleRate;
-        buffer.resize(samples * 2);
+        buffer.resize(samples * amountOfBytesPerSample);
         memcpy(&buffer.at(0), output, buffer.size());
         // Clean up the read data
         free(output);

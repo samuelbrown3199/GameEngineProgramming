@@ -1,0 +1,83 @@
+\hypertarget{classmyengine_1_1_ui_component}{}\doxysection{myengine\+::Ui\+Component Class Reference}
+\label{classmyengine_1_1_ui_component}\index{myengine::UiComponent@{myengine::UiComponent}}
+
+
+{\ttfamily \#include $<$Ui\+Component.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_ui_component_a71909d7504f8c6338c66087a4357cf33}{Initialize\+Quad}} ()
+\item 
+bool \mbox{\hyperlink{classmyengine_1_1_ui_component_a722a95fff91fb40cb1e4f7f30acb7fed}{Check\+For\+Mouse\+Hover}} ()
+\item 
+bool \mbox{\hyperlink{classmyengine_1_1_ui_component_a201b8e00d1c010269709ebed4103d70a}{Has\+Clicked}} ()
+\item 
+virtual void \mbox{\hyperlink{classmyengine_1_1_ui_component_a282fcf3c9aa62c13edac3c78de539c7c}{Render\+Ui\+Element}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_ui_system}{Ui\+System}} $>$ \mbox{\hyperlink{classmyengine_1_1_ui_component_a125a768a7d8bfec4771ef74043d5da34}{parent\+System}}
+\item 
+\mbox{\hyperlink{structmyengine_1_1_ui_rect}{Ui\+Rect}} \mbox{\hyperlink{classmyengine_1_1_ui_component_a9311bc8ffc61d5d9164e4774306a26f9}{rect}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{classmyengine_1_1_ui_component_a2df8ec7ebc402a190185dbb49238d362}{texture}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ui base component for UI elements to inherit from. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_ui_component_a722a95fff91fb40cb1e4f7f30acb7fed}\label{classmyengine_1_1_ui_component_a722a95fff91fb40cb1e4f7f30acb7fed}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!CheckForMouseHover@{CheckForMouseHover}}
+\index{CheckForMouseHover@{CheckForMouseHover}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{CheckForMouseHover()}{CheckForMouseHover()}}
+{\footnotesize\ttfamily bool myengine\+::\+Ui\+Component\+::\+Check\+For\+Mouse\+Hover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the mouse is currently hovering over the ui element. \mbox{\Hypertarget{classmyengine_1_1_ui_component_a201b8e00d1c010269709ebed4103d70a}\label{classmyengine_1_1_ui_component_a201b8e00d1c010269709ebed4103d70a}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!HasClicked@{HasClicked}}
+\index{HasClicked@{HasClicked}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{HasClicked()}{HasClicked()}}
+{\footnotesize\ttfamily bool myengine\+::\+Ui\+Component\+::\+Has\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the ui element has been clicked. \mbox{\Hypertarget{classmyengine_1_1_ui_component_a71909d7504f8c6338c66087a4357cf33}\label{classmyengine_1_1_ui_component_a71909d7504f8c6338c66087a4357cf33}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!InitializeQuad@{InitializeQuad}}
+\index{InitializeQuad@{InitializeQuad}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{InitializeQuad()}{InitializeQuad()}}
+{\footnotesize\ttfamily void myengine\+::\+Ui\+Component\+::\+Initialize\+Quad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets up the quad for use in rendering. \mbox{\Hypertarget{classmyengine_1_1_ui_component_a282fcf3c9aa62c13edac3c78de539c7c}\label{classmyengine_1_1_ui_component_a282fcf3c9aa62c13edac3c78de539c7c}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!RenderUiElement@{RenderUiElement}}
+\index{RenderUiElement@{RenderUiElement}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{RenderUiElement()}{RenderUiElement()}}
+{\footnotesize\ttfamily void myengine\+::\+Ui\+Component\+::\+Render\+Ui\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Renders the UI element. Child classes have to write their own implementation of this function. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_ui_component_a125a768a7d8bfec4771ef74043d5da34}\label{classmyengine_1_1_ui_component_a125a768a7d8bfec4771ef74043d5da34}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!parentSystem@{parentSystem}}
+\index{parentSystem@{parentSystem}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{parentSystem}{parentSystem}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classmyengine_1_1_ui_system}{Ui\+System}}$>$ myengine\+::\+Ui\+Component\+::parent\+System}
+
+Stores a weak pointer to the parent ui system. \mbox{\Hypertarget{classmyengine_1_1_ui_component_a9311bc8ffc61d5d9164e4774306a26f9}\label{classmyengine_1_1_ui_component_a9311bc8ffc61d5d9164e4774306a26f9}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!rect@{rect}}
+\index{rect@{rect}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmyengine_1_1_ui_rect}{Ui\+Rect}} myengine\+::\+Ui\+Component\+::rect}
+
+Stores the rectangle the UI element uses. \mbox{\Hypertarget{classmyengine_1_1_ui_component_a2df8ec7ebc402a190185dbb49238d362}\label{classmyengine_1_1_ui_component_a2df8ec7ebc402a190185dbb49238d362}} 
+\index{myengine::UiComponent@{myengine::UiComponent}!texture@{texture}}
+\index{texture@{texture}!myengine::UiComponent@{myengine::UiComponent}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmyengine_1_1_texture}{Texture}}$>$ myengine\+::\+Ui\+Component\+::texture}
+
+Stores the UI element texture. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ui\+Component.\+h\item 
+Ui\+Component.\+cpp\end{DoxyCompactItemize}

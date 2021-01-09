@@ -37,4 +37,9 @@ namespace myengine
 		alSourcei(sourceID, AL_BUFFER, clip->audioClipID);
 		alSourcePlay(sourceID);
 	}
+
+	void AudioSource::Stop()
+	{
+		alSourceStop(sourceID);
+	}
 }

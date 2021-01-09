@@ -12,7 +12,7 @@ namespace myengine
 		/**
 		*Stores the current screen size.
 		*/
-		int screenWidth = 650, screenHeight = 650;
+		int screenWidth = 900, screenHeight = 900;
 
 	public:
 		/**

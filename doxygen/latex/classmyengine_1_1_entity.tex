@@ -1,0 +1,78 @@
+\hypertarget{classmyengine_1_1_entity}{}\doxysection{myengine\+::Entity Class Reference}
+\label{classmyengine_1_1_entity}\index{myengine::Entity@{myengine::Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmyengine_1_1_entity_a2f37bdc2ca8b8aabe22476d55e28babc}{Add\+Component}} ()
+\item 
+{\footnotesize template$<$typename T , typename ... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmyengine_1_1_entity_a98bc56650bb909e6652f93d56d613ae5}{Add\+Component}} (Args \&\&... args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmyengine_1_1_entity_a79f68c09e3ff8c192d80d36ccacb31e3}{Get\+Component}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_entity_a9138330ab6bdd25904f35c26d750fcb5}{Render}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_entity_ad521cb89d108f87ed565d96301d3a543}{Tick}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ \mbox{\hyperlink{classmyengine_1_1_entity_a27ca63a8a6f38143265b41a74a8e9fd8}{Get\+Application}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_entity_a11dc4e9271d4875227b44998e6deebc5}\label{classmyengine_1_1_entity_a11dc4e9271d4875227b44998e6deebc5}} 
+class {\bfseries myengine\+::\+Application}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The entity class. Stores components for game data and functionality 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_entity_a2f37bdc2ca8b8aabe22476d55e28babc}\label{classmyengine_1_1_entity_a2f37bdc2ca8b8aabe22476d55e28babc}} 
+\index{myengine::Entity@{myengine::Entity}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ myengine\+::\+Entity\+::\+Add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a component of the passed type to the entity. \mbox{\Hypertarget{classmyengine_1_1_entity_a98bc56650bb909e6652f93d56d613ae5}\label{classmyengine_1_1_entity_a98bc56650bb909e6652f93d56d613ae5}} 
+\index{myengine::Entity@{myengine::Entity}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename ... Args$>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ myengine\+::\+Entity\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a component of the passed type to the entity along with parameters. \mbox{\Hypertarget{classmyengine_1_1_entity_a27ca63a8a6f38143265b41a74a8e9fd8}\label{classmyengine_1_1_entity_a27ca63a8a6f38143265b41a74a8e9fd8}} 
+\index{myengine::Entity@{myengine::Entity}!GetApplication@{GetApplication}}
+\index{GetApplication@{GetApplication}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{GetApplication()}{GetApplication()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ myengine\+::\+Entity\+::\+Get\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the application class linked from the entity. \mbox{\Hypertarget{classmyengine_1_1_entity_a79f68c09e3ff8c192d80d36ccacb31e3}\label{classmyengine_1_1_entity_a79f68c09e3ff8c192d80d36ccacb31e3}} 
+\index{myengine::Entity@{myengine::Entity}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ myengine\+::\+Entity\+::\+Get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the component of the passed type. \mbox{\Hypertarget{classmyengine_1_1_entity_a9138330ab6bdd25904f35c26d750fcb5}\label{classmyengine_1_1_entity_a9138330ab6bdd25904f35c26d750fcb5}} 
+\index{myengine::Entity@{myengine::Entity}!Render@{Render}}
+\index{Render@{Render}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void myengine\+::\+Entity\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The Render function for the entity. Loops over every component and calls their render function. \mbox{\Hypertarget{classmyengine_1_1_entity_ad521cb89d108f87ed565d96301d3a543}\label{classmyengine_1_1_entity_ad521cb89d108f87ed565d96301d3a543}} 
+\index{myengine::Entity@{myengine::Entity}!Tick@{Tick}}
+\index{Tick@{Tick}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily void myengine\+::\+Entity\+::\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The Tick function for the entity. Loops over every component and calls their tick function. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Entity.\+h\item 
+Entity.\+cpp\end{DoxyCompactItemize}

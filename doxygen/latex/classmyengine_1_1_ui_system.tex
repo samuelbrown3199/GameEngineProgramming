@@ -1,0 +1,92 @@
+\hypertarget{classmyengine_1_1_ui_system}{}\doxysection{myengine\+::Ui\+System Class Reference}
+\label{classmyengine_1_1_ui_system}\index{myengine::UiSystem@{myengine::UiSystem}}
+
+
+{\ttfamily \#include $<$Ui\+System.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ \mbox{\hyperlink{classmyengine_1_1_ui_system_a3deec78b0c7d53db47071392e061e485}{Get\+Application}} ()
+\item 
+virtual void \mbox{\hyperlink{classmyengine_1_1_ui_system_a96c5b3072e7e6a9b0952786ce5fa219a}{Initialize\+UI}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_ui_system_a537ff93ad7aadb54b625afbfe8804e11}{Update\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{classmyengine_1_1_ui_system_afecee5541b9b38cce1c94804243b638b}{On\+Update}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_ui_system_a822296d57341868d1fffe8c9d789bd61}{Render\+UI}} ()
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_ui_system_a607c2ef3e241cc581467df1b73034fd7}\label{classmyengine_1_1_ui_system_a607c2ef3e241cc581467df1b73034fd7}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Ui\+Element} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_ui_system_a0fb85da993faf4f375403fda0b0ae4b5}\label{classmyengine_1_1_ui_system_a0fb85da993faf4f375403fda0b0ae4b5}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_ui_system}{Ui\+System}} $>$ {\bfseries self}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ \mbox{\hyperlink{classmyengine_1_1_ui_system_a7d2fb5e231d55949e3448dcd5e647539}{application}}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_ui_system_a8c22c9126b79a5992c0d66ea11512371}\label{classmyengine_1_1_ui_system_a8c22c9126b79a5992c0d66ea11512371}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_shader}{Shader}} $>$ {\bfseries ui\+Shader}
+\item 
+bool \mbox{\hyperlink{classmyengine_1_1_ui_system_a0985979a079184bbf3181909090dd7dc}{open}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+U\+Is will inherit from this base class to create functional UI. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_ui_system_a3deec78b0c7d53db47071392e061e485}\label{classmyengine_1_1_ui_system_a3deec78b0c7d53db47071392e061e485}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!GetApplication@{GetApplication}}
+\index{GetApplication@{GetApplication}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{GetApplication()}{GetApplication()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ myengine\+::\+Ui\+System\+::\+Get\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a shared pointer to the application. \mbox{\Hypertarget{classmyengine_1_1_ui_system_a96c5b3072e7e6a9b0952786ce5fa219a}\label{classmyengine_1_1_ui_system_a96c5b3072e7e6a9b0952786ce5fa219a}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!InitializeUI@{InitializeUI}}
+\index{InitializeUI@{InitializeUI}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{InitializeUI()}{InitializeUI()}}
+{\footnotesize\ttfamily void myengine\+::\+Ui\+System\+::\+Initialize\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Inheriting classes can initialize the UI in this function. \mbox{\Hypertarget{classmyengine_1_1_ui_system_afecee5541b9b38cce1c94804243b638b}\label{classmyengine_1_1_ui_system_afecee5541b9b38cce1c94804243b638b}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily void myengine\+::\+Ui\+System\+::\+On\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Implemented via inheriting classes. Used to provide functionality to the UI. \mbox{\Hypertarget{classmyengine_1_1_ui_system_a822296d57341868d1fffe8c9d789bd61}\label{classmyengine_1_1_ui_system_a822296d57341868d1fffe8c9d789bd61}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!RenderUI@{RenderUI}}
+\index{RenderUI@{RenderUI}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{RenderUI()}{RenderUI()}}
+{\footnotesize\ttfamily void myengine\+::\+Ui\+System\+::\+Render\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Renders the UI. \mbox{\Hypertarget{classmyengine_1_1_ui_system_a537ff93ad7aadb54b625afbfe8804e11}\label{classmyengine_1_1_ui_system_a537ff93ad7aadb54b625afbfe8804e11}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!UpdateUI@{UpdateUI}}
+\index{UpdateUI@{UpdateUI}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{UpdateUI()}{UpdateUI()}}
+{\footnotesize\ttfamily void myengine\+::\+Ui\+System\+::\+Update\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calls the on update function every frame. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_ui_system_a7d2fb5e231d55949e3448dcd5e647539}\label{classmyengine_1_1_ui_system_a7d2fb5e231d55949e3448dcd5e647539}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!application@{application}}
+\index{application@{application}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{application}{application}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{classmyengine_1_1_application}{Application}}$>$ myengine\+::\+Ui\+System\+::application}
+
+Used to access application. \mbox{\Hypertarget{classmyengine_1_1_ui_system_a0985979a079184bbf3181909090dd7dc}\label{classmyengine_1_1_ui_system_a0985979a079184bbf3181909090dd7dc}} 
+\index{myengine::UiSystem@{myengine::UiSystem}!open@{open}}
+\index{open@{open}!myengine::UiSystem@{myengine::UiSystem}}
+\doxysubsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily bool myengine\+::\+Ui\+System\+::open = false}
+
+Used to determine whether the UI is open. If false the UI wont call On\+Update or the render function. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ui\+System.\+h\item 
+Ui\+System.\+cpp\end{DoxyCompactItemize}

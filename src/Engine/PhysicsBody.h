@@ -18,7 +18,10 @@ namespace myengine
 		std::shared_ptr<Collider> collider;
 
 	public:
-
+		/**
+		*Stores the rigidbody transform within the physics simulation.
+		*/
+		btTransform bodyTransform;
 		/**
 		*Stores the rigidbody mass.
 		*/

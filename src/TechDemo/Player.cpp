@@ -78,6 +78,7 @@ void Player::MouseMovement()
 		front.y = sin(glm::radians(pitch));
 		front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 		cam->forward = glm::normalize(front);
+		cam->GetEntity()->GetComponent<Transform>()->SetRotation(front);
 	}
 	else
 	{

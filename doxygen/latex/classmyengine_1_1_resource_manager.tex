@@ -1,0 +1,38 @@
+\hypertarget{classmyengine_1_1_resource_manager}{}\doxysection{myengine\+::Resource\+Manager Class Reference}
+\label{classmyengine_1_1_resource_manager}\index{myengine::ResourceManager@{myengine::ResourceManager}}
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmyengine_1_1_resource_manager_a718322d13075ad81160001cd8cda4929}{Load\+Resource}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_resource_manager_aca8635555224244679b5545261e486df}{Unload\+Unused\+Resources}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles resources for use in the engine. Handles loading and unloading of data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_resource_manager_a718322d13075ad81160001cd8cda4929}\label{classmyengine_1_1_resource_manager_a718322d13075ad81160001cd8cda4929}} 
+\index{myengine::ResourceManager@{myengine::ResourceManager}!LoadResource@{LoadResource}}
+\index{LoadResource@{LoadResource}!myengine::ResourceManager@{myengine::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{LoadResource()}{LoadResource()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ myengine\+::\+Resource\+Manager\+::\+Load\+Resource (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Loads a resource of the passed resource type. Adds it the loaded resource list. \mbox{\Hypertarget{classmyengine_1_1_resource_manager_aca8635555224244679b5545261e486df}\label{classmyengine_1_1_resource_manager_aca8635555224244679b5545261e486df}} 
+\index{myengine::ResourceManager@{myengine::ResourceManager}!UnloadUnusedResources@{UnloadUnusedResources}}
+\index{UnloadUnusedResources@{UnloadUnusedResources}!myengine::ResourceManager@{myengine::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{UnloadUnusedResources()}{UnloadUnusedResources()}}
+{\footnotesize\ttfamily void myengine\+::\+Resource\+Manager\+::\+Unload\+Unused\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Unloads resources whose use count is currently 1. This means that un-\/used resources are no longer kept in memory. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Resource\+Manager.\+h\item 
+Resource\+Manager.\+cpp\end{DoxyCompactItemize}

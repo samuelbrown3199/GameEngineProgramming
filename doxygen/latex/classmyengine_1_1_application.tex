@@ -1,0 +1,120 @@
+\hypertarget{classmyengine_1_1_application}{}\doxysection{myengine\+::Application Class Reference}
+\label{classmyengine_1_1_application}\index{myengine::Application@{myengine::Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_application_a9da3024a2da6b987713b3a518ce32ccb}{Main\+Loop}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_screen}{Screen}} $>$ \mbox{\hyperlink{classmyengine_1_1_application_a59a6122aeb94484230968702fb135509}{Get\+Screen}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_resource_manager}{Resource\+Manager}} $>$ \mbox{\hyperlink{classmyengine_1_1_application_a79c1ab52191589458f67b58973186eb0}{Get\+Resources}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{classmyengine_1_1_application_ac689b24f60b3383aef252f5ee839600e}{Add\+Entity}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_physics_world}{Physics\+World}} $>$ \mbox{\hyperlink{classmyengine_1_1_application_af1d708e7c586880b1297bf11595af08e}{Get\+Physics\+World}} ()
+\item 
+void \mbox{\hyperlink{classmyengine_1_1_application_a151dc0d1a1fec700c4038b7feaacebbe}{Add\+Camera}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_camera}{Camera}} $>$ cam)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmyengine_1_1_application_a7dadaa034082071adc613c75c6fd7075}{Bind\+UI}} ()
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_application_aa2424b9fa31291d57f1344564a44521e}\label{classmyengine_1_1_application_aa2424b9fa31291d57f1344564a44521e}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+UI} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ \mbox{\hyperlink{classmyengine_1_1_application_a67868e73b9f854641a6736da32984223}{Initialise}} (std\+::string window\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classmyengine_1_1_application_ab4dfeb4a98cbfbaf2d405c0d7a9c750e}{frame\+Rate}}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_application_a79607b0aab3bd93fd9c8715a908c56f6}\label{classmyengine_1_1_application_a79607b0aab3bd93fd9c8715a908c56f6}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_shader}{Shader}} $>$ {\bfseries standard\+Shader}
+\item 
+\mbox{\Hypertarget{classmyengine_1_1_application_a34e4a137765d7c673e7b2630f0048447}\label{classmyengine_1_1_application_a34e4a137765d7c673e7b2630f0048447}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_shader}{Shader}} $>$ {\bfseries ui\+Shader}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_camera}{Camera}} $>$ \mbox{\hyperlink{classmyengine_1_1_application_a46421907c18d44cd2ee9cb6615613f24}{camera}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Setups the engine for use in simulations or games. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_application_a151dc0d1a1fec700c4038b7feaacebbe}\label{classmyengine_1_1_application_a151dc0d1a1fec700c4038b7feaacebbe}} 
+\index{myengine::Application@{myengine::Application}!AddCamera@{AddCamera}}
+\index{AddCamera@{AddCamera}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{AddCamera()}{AddCamera()}}
+{\footnotesize\ttfamily void myengine\+::\+Application\+::\+Add\+Camera (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_camera}{Camera}} $>$}]{cam }\end{DoxyParamCaption})}
+
+Tells the engine what to use as the main camera. \mbox{\Hypertarget{classmyengine_1_1_application_ac689b24f60b3383aef252f5ee839600e}\label{classmyengine_1_1_application_ac689b24f60b3383aef252f5ee839600e}} 
+\index{myengine::Application@{myengine::Application}!AddEntity@{AddEntity}}
+\index{AddEntity@{AddEntity}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{AddEntity()}{AddEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_entity}{Entity}} $>$ myengine\+::\+Application\+::\+Add\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an entity and stores it in the entity list. Returns the created entity as a shared pointer. \mbox{\Hypertarget{classmyengine_1_1_application_a7dadaa034082071adc613c75c6fd7075}\label{classmyengine_1_1_application_a7dadaa034082071adc613c75c6fd7075}} 
+\index{myengine::Application@{myengine::Application}!BindUI@{BindUI}}
+\index{BindUI@{BindUI}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{BindUI()}{BindUI()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$T$>$ myengine\+::\+Application\+::\+Bind\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates, initializes and adds a UI to the application. \mbox{\Hypertarget{classmyengine_1_1_application_af1d708e7c586880b1297bf11595af08e}\label{classmyengine_1_1_application_af1d708e7c586880b1297bf11595af08e}} 
+\index{myengine::Application@{myengine::Application}!GetPhysicsWorld@{GetPhysicsWorld}}
+\index{GetPhysicsWorld@{GetPhysicsWorld}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{GetPhysicsWorld()}{GetPhysicsWorld()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_physics_world}{Physics\+World}} $>$ myengine\+::\+Application\+::\+Get\+Physics\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the physics world. \mbox{\Hypertarget{classmyengine_1_1_application_a79c1ab52191589458f67b58973186eb0}\label{classmyengine_1_1_application_a79c1ab52191589458f67b58973186eb0}} 
+\index{myengine::Application@{myengine::Application}!GetResources@{GetResources}}
+\index{GetResources@{GetResources}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{GetResources()}{GetResources()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_resource_manager}{Resource\+Manager}} $>$ myengine\+::\+Application\+::\+Get\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a shared pointer to the resource manager. \mbox{\Hypertarget{classmyengine_1_1_application_a59a6122aeb94484230968702fb135509}\label{classmyengine_1_1_application_a59a6122aeb94484230968702fb135509}} 
+\index{myengine::Application@{myengine::Application}!GetScreen@{GetScreen}}
+\index{GetScreen@{GetScreen}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{GetScreen()}{GetScreen()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_screen}{Screen}} $>$ myengine\+::\+Application\+::\+Get\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a shared pointer to the screen object. \mbox{\Hypertarget{classmyengine_1_1_application_a67868e73b9f854641a6736da32984223}\label{classmyengine_1_1_application_a67868e73b9f854641a6736da32984223}} 
+\index{myengine::Application@{myengine::Application}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmyengine_1_1_application}{Application}} $>$ myengine\+::\+Application\+::\+Initialise (\begin{DoxyParamCaption}\item[{std\+::string}]{window\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes the engine, starting required libraries, and making a window. \mbox{\Hypertarget{classmyengine_1_1_application_a9da3024a2da6b987713b3a518ce32ccb}\label{classmyengine_1_1_application_a9da3024a2da6b987713b3a518ce32ccb}} 
+\index{myengine::Application@{myengine::Application}!MainLoop@{MainLoop}}
+\index{MainLoop@{MainLoop}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{MainLoop()}{MainLoop()}}
+{\footnotesize\ttfamily void myengine\+::\+Application\+::\+Main\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts the main engine loop. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmyengine_1_1_application_a46421907c18d44cd2ee9cb6615613f24}\label{classmyengine_1_1_application_a46421907c18d44cd2ee9cb6615613f24}} 
+\index{myengine::Application@{myengine::Application}!camera@{camera}}
+\index{camera@{camera}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classmyengine_1_1_camera}{Camera}}$>$ myengine\+::\+Application\+::camera}
+
+Stores the main camera. \mbox{\Hypertarget{classmyengine_1_1_application_ab4dfeb4a98cbfbaf2d405c0d7a9c750e}\label{classmyengine_1_1_application_ab4dfeb4a98cbfbaf2d405c0d7a9c750e}} 
+\index{myengine::Application@{myengine::Application}!frameRate@{frameRate}}
+\index{frameRate@{frameRate}!myengine::Application@{myengine::Application}}
+\doxysubsubsection{\texorpdfstring{frameRate}{frameRate}}
+{\footnotesize\ttfamily double myengine\+::\+Application\+::frame\+Rate}
+
+Stores the current framerate. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application.\+h\item 
+Application.\+cpp\end{DoxyCompactItemize}
