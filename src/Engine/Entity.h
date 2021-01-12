@@ -61,7 +61,7 @@ namespace myengine
 				return rtn;
 			}
 
-			throw std::exception();
+			return nullptr;
 		}
 
 		/**

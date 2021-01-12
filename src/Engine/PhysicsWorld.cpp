@@ -11,7 +11,7 @@ namespace myengine
 		rtn->overlappingPairCache = new btDbvtBroadphase();
 		rtn->solver = new btSequentialImpulseConstraintSolver;
 		rtn->dynamicWorld = new btDiscreteDynamicsWorld(rtn->dispatcher, rtn->overlappingPairCache, rtn->solver, rtn->collisionConfiguration);
-		rtn->dynamicWorld->setGravity(btVector3(0, -10, 0));
+		rtn->dynamicWorld->setGravity(btVector3(0, -9.80, 0));
 
 		return rtn;
 	}

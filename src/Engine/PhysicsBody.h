@@ -31,7 +31,7 @@ namespace myengine
 		*/
 		btRigidBody* rigidBody;
 
-		void onInitialize(float _mass);
+		void onInitialize(btScalar _mass);
 		void onTick();
 	};
 }

@@ -28,7 +28,7 @@ int main()
 			for (int y = 0; y < amount; y++)
 			{
 				std::shared_ptr<Entity> physicsTest = app->AddEntity();
-				physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(25 + (-5 * x)+rand() % 5, 50 + (10*y), -30 + (-5 * z) + rand() % 5));
+				physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(25 + (-5 * x)+rand() % 5, 50 + (5*y) +rand() % 5, -30 + (-5 * z) + rand() % 5));
 				physicsTest->GetComponent<Transform>()->SetRotation(glm::vec3(rand()%360, rand() % 360, rand() % 360));
 				std::shared_ptr<MeshRenderer> pc = physicsTest->AddComponent<MeshRenderer>();
 				pc->SetModel("sphere.obj");
@@ -50,10 +50,10 @@ int main()
 	floor->AddComponent<Collider>(Collider::ColliderShape::box);
 	floor->AddComponent<PhysicsBody>(0.0f);
 	std::shared_ptr<AudioSource> au = floor->AddComponent<AudioSource>();
-	au->SetClip("test2.ogg");
+	au->SetClip("music.ogg");
 	au->loop = true;
 	au->gain = 1.0f;
-	au->Play();
+	//au->Play();
 
 	std::shared_ptr<Entity> player = app->AddEntity();
 	player->GetComponent<Transform>()->SetPosition(glm::vec3(0, 5, 0));
