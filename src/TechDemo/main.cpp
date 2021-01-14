@@ -31,11 +31,11 @@ int main()
 				physicsTest->GetComponent<Transform>()->SetPosition(glm::vec3(25 + (-5 * x)+rand() % 5, 50 + (5*y) +rand() % 5, -30 + (-5 * z) + rand() % 5));
 				physicsTest->GetComponent<Transform>()->SetRotation(glm::vec3(rand()%360, rand() % 360, rand() % 360));
 				std::shared_ptr<MeshRenderer> pc = physicsTest->AddComponent<MeshRenderer>();
-				pc->SetModel("sphere.obj");
+				pc->SetModel("cube.obj");
 				pc->SetShader(app->standardShader);
 				pc->SetTexture(texture);
-				physicsTest->AddComponent<Collider>(Collider::ColliderShape::sphere);
-				physicsTest->AddComponent<PhysicsBody>(5);
+				physicsTest->AddComponent<Collider>(Collider::ColliderShape::box);
+				physicsTest->AddComponent<PhysicsBody>(20);
 			}
 		}
 	}

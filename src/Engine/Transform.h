@@ -9,11 +9,25 @@
 
 namespace myengine
 {
+
+	class PhysicsBody;
+
 	/**
 	*Stores transform information of an entity. Automatically added to all entities.
 	*/
 	class Transform : public Component
 	{
+
+	private:
+		/**
+		*Checks if the transform has checked for a physics body.
+		*/
+		bool checkForPBody = false;
+		/**
+		*Stores a permanent shared pointer to a physics body.
+		*/
+		std::shared_ptr<PhysicsBody> pBody;
+
 	public:
 		/**
 		*Stores the position.

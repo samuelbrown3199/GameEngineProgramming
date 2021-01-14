@@ -41,9 +41,12 @@ namespace myengine
 
 	glm::mat4 Transform::GetModelMatrix()
 	{
-		std::shared_ptr<PhysicsBody> physicsBody = GetEntity()->GetComponent<PhysicsBody>();
-
-		if (!physicsBody)
+		if (!checkForPBody)
+		{
+			pBody = GetEntity()->GetComponent<PhysicsBody>();
+			checkForPBody = true;
+		}
+		if (!pBody)
 		{
 			glm::mat4 rtn(1.0f);
 
@@ -58,7 +61,7 @@ namespace myengine
 		else
 		{
 			btScalar matrix[16];
-			physicsBody->bodyTransform.getOpenGLMatrix(matrix);
+			pBody->bodyTransform.getOpenGLMatrix(matrix);
 
 			glm::mat4 rtn = glm::make_mat4(matrix);
 			rtn = glm::scale(rtn, scale);
