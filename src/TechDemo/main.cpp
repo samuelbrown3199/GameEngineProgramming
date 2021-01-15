@@ -71,6 +71,11 @@ int main()
 	fc->SetModel("cube.obj");
 	fc->SetShader(app->standardShader);
 	fc->SetTexture(texture2);
+	std::shared_ptr<AudioSource> as = testCube->AddComponent<AudioSource>();
+	as->SetClip("test2.ogg");
+	as->gain = 1.0f;
+	as->loop = true;
+	as->Play();
 
 	app->MainLoop();
 
